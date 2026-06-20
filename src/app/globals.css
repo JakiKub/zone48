@@ -1,26 +1,204 @@
+@import "https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&display=swap";
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+}
+
+.navbar-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2b2ba8;
+    width: 100vw;
+    height: 5vh;
+    justify-content: space-between;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.navbar-top > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.9vw;
+}
+
+.navbar-top p {
+    color: #fff;
+    font-weight: 500;
+}
+
+.lang-change {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 12vw;
+    position: relative;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.lang-change button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.lang-choice {
+    position: absolute;
+    top: 120.5%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 7.5vh;
+    background: linear-gradient(to right, #beff00 0%, #2b2ba8 28%, #2b2ba8 100%);
+    background-size: 150% 100%;
+    background-position: right center;  
+    gap: 1.5vw;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: background-position .4s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-position: left center;
+    }
+}
+
+.szukaj, .profil {
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.navbar-bottom {
+    display: flex;
+    flex-direction: row;
+    background-color: #0e0d16;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.navbar-link {
+    color: #fff;
+    font-size: 1.45rem;
+    cursor: pointer;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #beff00, #2b2ba8);
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    background-position: left bottom;
+    transition: background-size .3s;
+
+    &:hover {
+        background-size: 100% 2px;
+    }
+}
+
+.discover {
+    position: relative;
+}
+
+.city-choice {
+    position: absolute;
+    top: 185%;
+    left: 0;
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.city-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1.3vw;
+    width: 15vw;
+    height: 5vh;
+    background: #0e0d16;
+    border: 1px solid #0e0d16;
+    color: #fff;
+    font-size: 1.45rem; 
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover {
+        background: #beff00;
+        color: #0e0d16;
+    }
+}
+
+.more {
+    position: relative;
+}
+
+.more-choice {
+    position: absolute;
+    top: 185%;
+    left: 0;
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1.3vw;
+    width: 15vw;
+    height: 5vh;
+    background: #0e0d16;
+    border: 1px solid #0e0d16;
+    color: #fff;
+    font-size: 1.45rem; 
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover {
+        background: #beff00;
+        color: #0e0d16;
+    }
 }
