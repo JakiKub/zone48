@@ -1,7 +1,15 @@
+/*
+    s - rozne linki czy cos
+    n - naglowki
+    t - teksty
+    b - przyciski
+    n{}_{} - podtytuly czy cos
+*/
+
 export const translation = {
     true: {
         navbar: {
-            top: "Projekt realizowany w ramach ogólnopolskiej Olimpiady - Zwolnieni z Teorii",
+            top: "Zwolnieni z Teorii 2026 - 2027",
             choice: "POLSKI",
             img: "/desktop/navbar/nvb_flag_poland.png",
             s1: "Strona główna",
@@ -12,6 +20,70 @@ export const translation = {
             s6: "Kontakt",
             s7: "Więcej"
         },
+        home: {
+            n1: "EKSPLORUJ NOWE DESTYNACJE",
+            t1: "Twoja przygoda zaczyna się tutaj. Zbierz znajomych lub wyrusz solo, spakuj plecak i ruszaj na miasto odkrywać nowe miejsca lub zakochać się w nich na nowo.",
+            b1: "ZACZYNAMY",
+            n1_2: "NAGŁÓWKI",
+            n2: "JAK TO DZIAŁA?",
+            n2_01: "WYRUSZ NA MIASTO",
+            n2_02: "ODPOWIADAJ NA PYTANIA",
+            n2_03: "ZBIERAJ I WYDAWAJ PUNKTY",
+            t2_01: "Zabierz plecak, zbierz ekipę i wyruszcie na miasto - w miejsca, które są Wam już znane lub te, które chcecie odwiedzić ponownie.",
+            t2_02: "Podczas zwiedzania zwracajcie uwagę na szczegóły i poznajcie historię danego miejsca lub obiektu. Następnie odpowiedzcie na pytania jego dotyczące.",
+            t2_03: "Za poprawne odpowiedzi oraz inne aktywności zdobywasz punkty, które możesz wydawać na zniżki u partnerów projektu - w restauracjach, sklepach z pamiątkami i innych.",
+            n3: "LOGOWANIE DO PLATFORMY",
+            n3_1: "CZAS EKSPLOROWAĆ",
+            t3_01: "Eksploruj, poznawaj, czerp radość z tego - powtarzaj.",
+            t3_02: "Nowe miejsca czekają na Ciebie!",
+            t3_03: "Zostaw swój ślad na szczycie.",
+            b3_01: "ZALOGUJ SIĘ",
+            b3_02: "ZAREJESTRUJ SIĘ",
+            n4: "ODKRYWAJ",
+            miasto: [
+                { n4_1: "TORUŃ", t4: "Średniowieczne miasto, znane głównie z pierników, zapierającej dech w piersiach panoramy oraz gotyckiej starówki. Odwiedź gród Kopernika i odkryj jego piękno.", imgMobile: "/mobile/home/glowna_zdj_torun.png" },
+                { n4_1: "Placeholder", t4: "placeholder", imgMobile: "/mobile/home/glowna_zdj_torun.png" },
+                { n4_1: "Placeholder", t4: "placeholder", imgMobile: "/mobile/home/glowna_zdj_torun.png" },
+                { n4_1: "Placeholder", t4: "placeholder", imgMobile: "/mobile/home/glowna_zdj_torun.png" },
+                { n4_1: "Placeholder", t4: "placeholder", imgMobile: "/mobile/home/glowna_zdj_torun.png" }
+            ],
+            b4: "ODKRYWAJ",
+            n5: "O PROJEKCIE",
+            n5_1: "POZNAJ NASZ ZESPÓŁ (DOWNA)",
+            t5_01: "Zmobilizowani, ambitni i profesjonalni.",
+            t5_02: "Poznaj zespół, który już czwarty rok zmienia Polskę - i nie tylko.",
+            b5: "DOWIEDZ SIĘ WIĘCEJ"
+        },
+        footer: {
+            n1: "PROJEKT",
+            n2: "EKSPLOROWANIE",
+            n3: "MEDIA SPOŁECZNOŚCIOWE",
+            regulamin: "Regulamin",
+            cookies: "Polityka prywatności",
+            cookie_settings: "Ustawienia cookies",
+            l1: "Strona główna",
+            l2: "O projekcie",
+            l3: "Akcje",
+            l4: "Kontakt",
+            l5: "Odkrywaj",
+            l6: "Artykuły",
+            rights: "Wszelkie prawa zastrzeżone"
+        },
+        menu: {
+            b1: "ZALOGUJ SIĘ",
+            b2: "ZAREJESTRUJ SIĘ",
+            b3: "Strona główna",
+            b4: "Odkrywaj",
+            b5: "Toruń (POL)",
+            b6: "Budapest (HUN)",
+            b7: "O projekcie",
+            // b8: "",
+            b8: "Akcje",
+            b9: "Kontakt",
+            b10: "Więcej",
+            b11: "Podcast",
+            b12: "FAQ"
+        }
     },
     false: {
         navbar: {
@@ -25,6 +97,70 @@ export const translation = {
             s5: "Actions",
             s6: "Contact",
             s7: "More"
+        },
+        home: {
+            n1: "EXPLORE NEW DESTINATIONS",
+            t1: "kys",
+            b1: "GET STARTED",
+            n1_2: "kys",
+            n2: "kys",
+            n2_01: "kys",
+            n2_02: "kys",
+            n2_03: "kys",
+            t2_01: "kys",
+            t2_02: "kys",
+            t2_03: "kys",
+            n3: "kys",
+            n3_1: "kys",
+            t3_01: "kys",
+            t3_02: "kys",
+            t3_03: "kys",
+            b3_01: "LOG IN",
+            b3_02: "REGISTER",
+            n4: "kys",
+            miasto: [
+                { n4_1: "kys", t4: "kys", imgMobile: "/mobile/home/glowna_zdj_torun.png" },
+                { n4_1: "Placeholder", t4: "placeholder", imgMobile: "/mobile/home/glowna_zdj_torun.png" },
+                { n4_1: "Placeholder", t4: "placeholder", imgMobile: "/mobile/home/glowna_zdj_torun.png" },
+                { n4_1: "Placeholder", t4: "placeholder", imgMobile: "/mobile/home/glowna_zdj_torun.png" },
+                { n4_1: "Placeholder", t4: "placeholder", imgMobile: "/mobile/home/glowna_zdj_torun.png" }
+            ],
+            b4: "kys",
+            n5: "kys",
+            n5_1: "kys",
+            t5_01: "kys",
+            t5_02: "kys",
+            b5: "kys"
+        },
+        footer: {
+            n1: "PROJECT",
+            n2: "EXPLORATION",
+            n3: "SOCIAL MEDIA",
+            regulamin: "Terms of service",
+            cookies: "Privacy policy",
+            cookie_settings: "Cookie settings",
+            l1: "Home page",
+            l2: "About us",
+            l3: "Our actions",
+            l4: "Contact",
+            l5: "Discover",
+            l6: "Articles",
+            rights: "All rights reserved"
+        },
+        menu: {
+            b1: "LOG IN",
+            b2: "REGISTER",
+            b3: "Home page",
+            b4: "Discover",
+            b5: "Toruń (POL)",
+            b6: "Budapest (HUN)",
+            b7: "About us",
+            // b8: "Articles",
+            b8: "Actions",
+            b9: "Contact",
+            b10: "More",
+            b11: "Podcast",
+            b12: "FAQ"
         }
     }
 }
