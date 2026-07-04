@@ -89,7 +89,7 @@ const Navbar = () => {
                 <Link href="/" className="navbar-link">{t.navbar.s3}</Link>
                 {/* <Link href="/" className="navbar-link">{t.navbar.s4}</Link> */}
                 <Link href="/" className="navbar-link">{t.navbar.s5}</Link>
-                <Link href="/" className="navbar-link">{t.navbar.s6}</Link>
+                <Link href="/kontakt" className="navbar-link">{t.navbar.s6}</Link>
                 <div className="more">
                     <button className="navbar-link" onClick={() => setIsMoreOpen(!isMoreOpen)}>{t.navbar.s7}</button>
 

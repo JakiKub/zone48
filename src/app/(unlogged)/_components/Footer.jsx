@@ -25,7 +25,7 @@ const Footer = () => {
                         <Link href="/" className="footer-link">{t.footer.l2}</Link>
                         <Link href="/" className="footer-link">{t.footer.l3}</Link>
                         <Link href="/" className="footer-link">Podcast</Link>
-                        <Link href="/" className="footer-link">{t.footer.l4}</Link>
+                        <Link href="/kontakt" className="footer-link">{t.footer.l4}</Link>
                     </nav>
                     <nav>
                         <p>{t.footer.n2}</p>

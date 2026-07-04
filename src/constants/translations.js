@@ -83,6 +83,23 @@ export const translation = {
             b10: "Więcej",
             b11: "Podcast",
             b12: "FAQ"
+        },
+        contact: {
+            n1: "KONTAKT",
+            t1: "Jesteśmy tu dla Ciebie! Jak możemy Ci pomóc?",
+            b1: "SKONTAKTUJ SIĘ Z NAMI",
+            t2: "Numer telefonu",
+            t3: "Siedziba projektu",
+            t3_02: "Toruń, Polska",
+            t4: "Adres e-mail",
+            t5: "Media społecznościowe",
+            n2: "Formularz kontaktowy",
+            t6: "Imię i nazwisko",
+            t7: "Adres e-mail",
+            t8: "Wybierz sprawę",
+            t8_test: "test",
+            t9: "Treść wiadomości",
+            b3: "Wyślij"
         }
     },
     false: {
@@ -161,6 +178,23 @@ export const translation = {
             b10: "More",
             b11: "Podcast",
             b12: "FAQ"
+        },
+        contact: {
+            n1: "CONTACT",
+            t1: "Nie jesteśmy tu dla Ciebie! Nie pomożemy Ci!",
+            b1: "CONTACT US",
+            t2: "Phone number",
+            t3: "sami sobie to tlumaczcie mi sie nie chce",
+            t3_02: "Toruń, Poland",
+            t4: "E-mail address",
+            t5: "Social media",
+            n2: "Contact Form",
+            t6: "Name and surname",
+            t7: "E-mail address",
+            t8: "Choose sprawe",
+            t8_test: "test",
+            t9: "placeholder",
+            b3: "Send"
         }
     }
 }

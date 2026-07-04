@@ -24,7 +24,7 @@ const Menu = ({ isMenuOpen, t }) => {
             </div>
             <Link href="/" className="menu-link">{t.menu.b7}</Link>
             <Link href="/" className="menu-link">{t.menu.b8}</Link>
-            <Link href="/" className="menu-link">{t.menu.b9}</Link>
+            <Link href="/kontakt" className="menu-link">{t.menu.b9}</Link>
             <div className="menu-item-dropdown">
                 <button className="menu-item-bttn" onClick={() => setIsSub2Open(!isSub2Open)}>{t.menu.b10}</button>
                 <div className={`submenu-list ${isSub2Open ? "submenu-open" : ""}`}>

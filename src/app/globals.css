@@ -866,6 +866,244 @@ body {
 }
 
 
+/* contact */
+.kontakt-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #0e0d16;
+    position: relative;
+    gap: 15vh;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    border-top: 3px solid #48474d;
+    z-index: 1000;
+}
+
+.kontakt-img{
+    position: absolute;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.kontakt-top, .kontakt-bottom {
+    z-index: 1000;
+}
+
+.kontakt-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding-left: 6vw; 
+    gap: 2vh;
+}
+
+.kontakt-top h1 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.kontakt-top p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.kontakt-top button {
+    width: 20vw;
+    height: 7vh;
+    border: 2px solid #beff00;
+    border-radius: .2rem;
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    background: linear-gradient(to right, #beff00 0%, #0e0d16 40%, #0e0d16 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position .5s ease-in;
+
+    &:hover {
+        background-position: left bottom;
+    }
+}
+
+.kontakt-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    scroll-margin-top: 6vh;
+}
+
+.kontakt-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2.5vh
+}
+
+.kontakt-div-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.kontakt-p-1 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+    padding-left: 65px;
+}
+
+.kontakt-p-2 {
+    color: #fff;
+    background-color: #151421;
+    font-size: 1.3rem;
+    width: 17vw;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    border-left: 2px solid #48474d;
+    margin: 0;
+}
+
+.kontakt-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.kontakt-wrapper div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.kontakt-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.kontakt-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 50vw;
+    width: 100%;
+    gap: 4vh;
+}
+
+.kontakt-right h2 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.kontakt-right hr {
+    width: 100%;
+    height: 3px;
+    background-color: #beff00;
+    border: none;
+}
+
+.kontakt-right-div {
+    width: 100%;
+}
+
+.kontakt-p-3 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.kontakt-input {
+    color: #fff;
+    background-color: #151421;
+    font-size: 1.3rem;
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    border-left: 2px solid #48474d;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select.kontakt-input {
+    background-image: url("/desktop/contact/kontakt_strzalka.png");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.kontakt-send {
+    width: 100%;
+    height: 7vh;
+    border: 2px solid #beff00;
+    border-radius: .2rem;
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    background: linear-gradient(to right, #beff00 0%, #0e0d16 40%, #0e0d16 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position .5s ease-in;
+
+    &:hover {
+        background-position: left bottom;
+    }
+}
+
+.kontakt-toast-success, .kontakt-toast-error {
+    background-color: #0e0d16 !important;
+    color: #beff00 !important;
+    border:  2px solid #beff00 !important;
+    border-radius: .1rem !important;
+    z-index: 100000001 !important;
+}
+
 @media only screen and (max-width: 768px) {
     /* navbar */
     .szukaj img, .profil img {

@@ -20,6 +20,9 @@ const geist = Geist({
 export const metadata = {
   title: "Zone 48",
   description: "",
+  icons: {
+    icon: "/misc/logo_strony_zone48.svg"
+  }
 };
 
 export default function RootLayout({ children }) {
