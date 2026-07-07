@@ -891,6 +891,10 @@ body {
     z-index: 0;
 }
 
+.kontakt-img-mobile {
+    display: none;
+}
+
 .kontakt-top, .kontakt-bottom {
     z-index: 1000;
 }
@@ -1033,6 +1037,13 @@ body {
     height: 3px;
     background-color: #beff00;
     border: none;
+}
+
+.kontakt-right > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
 }
 
 .kontakt-right-div {
@@ -1731,5 +1742,100 @@ select.kontakt-input {
     .home-5-wrapper p {
         max-width: 90%;
         text-align: center;
+    }
+
+    /* contact */
+    .kontakt-page {
+        flex-direction: column;
+        width: 100%;
+        min-height: max(700px, 80dvh) !important;
+        gap: 50px;
+    }
+
+    .kontakt-img {
+        display: none;
+    }
+
+    .kontakt-img-mobile {
+        display: block;
+        max-width: 95%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 4%;
+    }
+
+    .kontakt-top {
+        width: 100%;
+    }
+
+    .kontakt-top h1 {
+        font-size: 2.3rem;
+    }
+
+    .kontakt-top p {
+        font-size: .89rem;
+    }
+
+    .kontakt-top button {
+        font-size: 1rem;
+        width: 230px;
+        height: 55px;
+    }
+
+    .kontakt-bottom {
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .kontakt-left {
+        width: 100%;
+    }
+
+    .kontakt-div-1 {
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .kontakt-wrapper {
+        width: 100%;
+    }
+
+    .kontakt-wrapper p {
+        width: 75%;
+        font-size: 1.1rem;
+        padding-left: 12px;
+    }
+
+    .kontakt-right {
+        width: 100%;
+        max-width: unset;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .kontakt-right h2 {
+        font-size: 1.4rem;
+    }
+
+    .kontakt-right hr {
+        max-width: 95%;
+    }
+    
+    .kontakt-right > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .kontakt-right-div {
+        width: 80%;
+    }
+
+    .kontakt-send {
+        max-width: 95%;
     }
 }

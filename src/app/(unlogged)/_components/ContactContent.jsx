@@ -53,6 +53,7 @@ const KontaktContent = () => {
     return (
         <main className="kontakt-page">
             <img src="/desktop/contact/kontakt_grafika.png" alt="zdjecie" className="kontakt-img"/>
+            <img src="/mobile/contact/kontakt_mb_tlo.png" alt="zdjecie" className="kontakt-img-mobile"/>
             <div className="kontakt-top">
                 <h1>{t.contact.n1}</h1>
                 <p>{t.contact.t1}</p>
@@ -100,26 +101,28 @@ const KontaktContent = () => {
                 <form className="kontakt-right" onSubmit={handleSubmit}>
                     <h2>{t.contact.n2}</h2>
                     <hr/>
-                    <div className="kontakt-right-div">
-                        <p className="kontakt-p-3">{t.contact.t6}</p>
-                        <input type="text" name="imie" className="kontakt-input" required></input>
+                    <div>
+                        <div className="kontakt-right-div">
+                            <p className="kontakt-p-3">{t.contact.t6}</p>
+                            <input type="text" name="imie" className="kontakt-input" required></input>
+                        </div>
+                        <div className="kontakt-right-div">
+                            <p className="kontakt-p-3">{t.contact.t7}</p>
+                            <input type="email" name="email" className="kontakt-input" required></input>
+                        </div>
+                        <div className="kontakt-right-div">
+                            <p className="kontakt-p-3">{t.contact.t8}</p>
+                            <select name="temat" className="kontakt-input" required>
+                                <option value=""></option>
+                                <option value="test">{t.contact.t8_test}</option>
+                            </select>
+                        </div>
+                        <div className="kontakt-right-div">
+                            <p className="kontakt-p-3">{t.contact.t9}</p>
+                            <input type="text" name="wiadomosc" className="kontakt-input" required></input>
+                        </div>
+                        <button className="kontakt-send" type="submit" disabled={loading}>{t.contact.b3}</button>
                     </div>
-                    <div className="kontakt-right-div">
-                        <p className="kontakt-p-3">{t.contact.t7}</p>
-                        <input type="email" name="email" className="kontakt-input" required></input>
-                    </div>
-                    <div className="kontakt-right-div">
-                        <p className="kontakt-p-3">{t.contact.t8}</p>
-                        <select name="temat" className="kontakt-input" required>
-                            <option value=""></option>
-                            <option value="test">{t.contact.t8_test}</option>
-                        </select>
-                    </div>
-                    <div className="kontakt-right-div">
-                        <p className="kontakt-p-3">{t.contact.t9}</p>
-                        <input type="text" name="wiadomosc" className="kontakt-input" required></input>
-                    </div>
-                    <button className="kontakt-send" type="submit" disabled={loading}>{t.contact.b3}</button>
 
                     <Toaster position="top center" toastOptions={{ success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
                 </form>
