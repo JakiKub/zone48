@@ -22,7 +22,7 @@ const Menu = ({ isMenuOpen, t }) => {
                     <Link href="/" className="submenu-link">{t.menu.b6}</Link>
                 </div>
             </div>
-            <Link href="/" className="menu-link">{t.menu.b7}</Link>
+            <Link href="/o-nas" className="menu-link">{t.menu.b7}</Link>
             <Link href="/" className="menu-link">{t.menu.b8}</Link>
             <Link href="/kontakt" className="menu-link">{t.menu.b9}</Link>
             <div className="menu-item-dropdown">

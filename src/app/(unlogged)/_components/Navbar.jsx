@@ -68,11 +68,11 @@ const Navbar = () => {
                 </div>
             </div>
             <nav className="navbar-bottom">
-                <Link className="logo" href="/">
+                <Link className="logo" href={isPolish ? "/" :"/?lang=en"}>
                     <img src="/desktop/navbar/nvb_logo_projektu.png" alt="logo"/>
                 </Link>
                 <button className="menu-bttn" onClick={() => setIsMenuOpen(!isMenuOpen)}><img src={isMenuOpen ? "/mobile/navbar/navbar_tel_zamknijmenu.png" : "/mobile/navbar/navbar_tel_otworzmenu.png"}/></button>
-                <Link href="/" className="navbar-link">{t.navbar.s1}</Link>
+                <Link href={isPolish ? "/" :"/?lang=en"} className="navbar-link">{t.navbar.s1}</Link>
                 {/* tutaj wpisac inne sciezki jak beda gotowe :)) */}
                 <div className="discover">
                     <button className="navbar-link" onClick={() => setIsDiscOpen(!isDiscOpen)}>{t.navbar.s2}</button>
@@ -86,10 +86,10 @@ const Navbar = () => {
                         )}
                     </AnimatePresence>
                 </div>
-                <Link href="/" className="navbar-link">{t.navbar.s3}</Link>
+                <Link href={isPolish ? "/o-nas" : "/o-nas?lang=en"} className="navbar-link">{t.navbar.s3}</Link>
                 {/* <Link href="/" className="navbar-link">{t.navbar.s4}</Link> */}
                 <Link href="/" className="navbar-link">{t.navbar.s5}</Link>
-                <Link href="/kontakt" className="navbar-link">{t.navbar.s6}</Link>
+                <Link href={isPolish ? "/kontakt" : "/kontakt?lang=en"} className="navbar-link">{t.navbar.s6}</Link>
                 <div className="more">
                     <button className="navbar-link" onClick={() => setIsMoreOpen(!isMoreOpen)}>{t.navbar.s7}</button>
 

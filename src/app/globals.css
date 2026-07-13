@@ -24,6 +24,7 @@ body {
     flex-direction: column;
     z-index: 10000;
     position: relative;
+    border-bottom: 2px solid #48474d;
 }
 
 .navbar-top {
@@ -879,7 +880,6 @@ body {
     gap: 15vh;
     padding-top: 20vh;
     padding-bottom: 10vh;
-    border-top: 3px solid #48474d;
     z-index: 1000;
 }
 
@@ -1113,6 +1113,370 @@ select.kontakt-input {
     border:  2px solid #beff00 !important;
     border-radius: .1rem !important;
     z-index: 100000001 !important;
+}
+
+
+/* about us */
+.o-nas-page {
+    background-color: #0e0d16;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.o-nas-hr {
+    background-color: #48474d;
+    width: 95%;
+    border: none;
+    height: 3px;
+}
+
+.o-nas-section-1 h1, .o-nas-section-1 p, .o-nas-section-1 button, .o-nas-section-2 h2, .o-nas-section-2 hr, .o-nas-section-2 h3, .o-nas-section-2 p, .o-nas-2-bottom, .o-nas-2-bottom * {
+    z-index: 100000;
+    position: relative;
+}
+
+.o-nas-section-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 2vh;
+    padding-left: 8vw;
+    padding-bottom: 31vh;
+}
+
+.o-nas-1-img {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    display: block;
+    max-width: 95%;
+}
+
+.o-nas-section-1 h1 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+.o-nas-section-1 p {
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.o-nas-section-1 button {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: .05rem;
+    border: 2px solid #beff00;
+    border-radius: .35rem;
+    width: 18vw;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    cursor: pointer;
+    background: linear-gradient(to right, #beff00 0%, #0e0d16 40%, #0e0d16 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position .2s ease-in;
+
+    &:hover {
+        background-position: left bottom;
+    }
+}
+
+.o-nas-section-2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 8vw;
+    padding-bottom: 10vh;
+    gap: 9vh;
+}
+
+.o-nas-2-top {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.o-nas-2-img {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.o-nas-section-2 h2 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.o-nas-section-2 hr {
+    background-color: #beff00;
+    border: none;
+    width: 20vw;
+    height: 3px;
+    transform: translateX(-5%);
+}
+
+.o-nas-section-2 h3 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.o-nas-2-p-1 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    max-width: 40%;
+}
+
+.o-nas-2-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+}
+
+.o-nas-2-actual-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.o-nas-2-vertical-line {
+    width: 3px;
+    height: 25vh;
+    background-color: #48474d;
+}
+
+.o-nas-2-actual-div h4 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+.o-nas-2-p-2 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: center;
+    max-width: 80%;
+}
+
+.o-nas-section-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 4vh;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 10vh;
+}
+
+.o-nas-3-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 2vh;
+    padding-left: 5vw;
+}
+
+.o-nas-3-top h2 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.o-nas-3-top hr {
+    background-color: #beff00;
+    width: 95%;
+    border: none;
+    height: 3px;
+    transform: translateX(-1%);
+}
+
+.o-nas-3-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-content: center;
+    row-gap: 5vh;;
+}
+
+.o-nas-3-grid-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;gap: 2vw;
+}
+
+.o-nas-3-grid-div-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.3vh;
+    /* max-width: 100%; */
+}
+
+.o-nas-3-grid-div-2 h4 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.o-nas-3-grid-div-2 hr {
+    background-color: #48474d;
+    width: 16vw;
+    height: 3px;
+}
+
+.o-nas-3-grid-div-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .1vh;
+}
+
+.o-nas-3-grid-div-3 p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+}
+
+.o-nas-3-grid-div-2 button {
+    cursor: pointer;
+    color: #beff00;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+}
+
+.osoba-div {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 100000000;
+}
+
+.osoba-div-inside {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 715px;
+    width: 65vw;
+    border: 2px solid #beff00;
+    background: #0e0d16;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: max(550px, 25vw);
+    gap: 2vh;
+}
+
+.osoba-div-inside button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 69px;
+    height: 69px;
+    cursor: pointer;
+}
+
+.osoba-div-inside img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.osoba-div-inside h2 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.osoba-div-inside h3 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.osoba-div-inside hr {
+    width: 90%;
+    height: 3px;
+    background-color: #48474d;
+    border: none;
+}
+
+.osoba-div-inside p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    max-width: 90%;
+}
+
+.osoba-div-inside div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2vw;
+    width: 80%;
+}
+
+.osoba-div-inside h4 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
 }
 
 @media only screen and (max-width: 768px) {

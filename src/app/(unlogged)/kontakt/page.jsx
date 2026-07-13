@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-import KontaktContent from "../_components/ContaktContent";
+import KontaktContent from "../_components/KontaktContent";
 
 const KontaktPage = () => {
     return (
