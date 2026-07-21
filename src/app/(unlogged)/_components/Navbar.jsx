@@ -21,6 +21,8 @@ const Navbar = () => {
 
     const t = translation[isPolish];
 
+    const closeMenu = () => setIsMenuOpen(false);
+
     const languageChange = (lang) => {
         const params = new URLSearchParams(searchParams.toString());
 
@@ -104,7 +106,7 @@ const Navbar = () => {
                 </div>
             </nav>
             <AnimatePresence>
-                {isMenuOpen && <Menu isMenuOpen={isMenuOpen} t={t}/>}
+                {isMenuOpen && <Menu isMenuOpen={isMenuOpen} t={t} closeMenu={closeMenu}/>}
             </AnimatePresence>
         </header>
     )

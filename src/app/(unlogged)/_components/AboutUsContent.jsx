@@ -19,7 +19,8 @@ const AboutUsContent = () => {
     return (
         <main className="o-nas-page">
             <section className="o-nas-section-1">
-                <img src="/desktop/about-us/(o_o).png" className="o-nas-1-img"/>
+                <img src="/desktop/about-us/(o_o).png" className="o-nas-1-img" alt="efhyiruxwbr"/>
+                <img src="/mobile/about-us/oprojekcie_mb_1.png" className="o-nas-1-img-mobile" alt="wehjgw"/>
                 <h1>{t.about_us.n1}</h1>
                 <p>{t.about_us.t1}</p>
                 <button onClick={() => document.getElementById("oNasSekcjaDwa").scrollIntoView({ behavior: "smooth" })}>{t.about_us.b1} <img src="/desktop/home/stronaglowna_strzalkawdol.png" alt="strzalka" className="strzalkaScroll"/></button>
@@ -27,11 +28,17 @@ const AboutUsContent = () => {
             <hr className="o-nas-hr"/>
             <section className="o-nas-section-2" id="oNasSekcjaDwa">
                 <div className="o-nas-2-top">
-                    <img src="/desktop/about-us/O_o.png" className="o-nas-2-img"/>
-                    <h2>{t.about_us.n2}</h2>
-                    <hr/>
-                    <h3>{t.about_us.n2_02}</h3>
-                    <p className="o-nas-2-p-1">{t.about_us.t2}</p>
+                    <img src="/desktop/about-us/O_o.png" className="o-nas-2-img" alt="gyreygqr"/>
+                    <img src="/mobile/about-us/oprojekcie_mb_2.png" className="o-nas-2-img-mobile" alt="erhgbjgcqucr"/>
+                    <div className="kys-igor">
+                        <h2>{t.about_us.n2}</h2>
+                        <hr className="kys"/>
+                    </div>
+                    <div className="kys-igor-2">
+                        <h3>{t.about_us.n2_02}</h3>
+                        <hr className="o-nas-hr-mobile"/>
+                        <p className="o-nas-2-p-1">{t.about_us.t2}</p>
+                    </div>
                 </div>
                 <div className="o-nas-2-bottom">
                     <div className="o-nas-2-actual-div">
