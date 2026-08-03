@@ -12,6 +12,7 @@ export const translation = {
             top: "Zwolnieni z Teorii 2026 - 2027",
             choice: "POLSKI",
             img: "/desktop/navbar/nvb_flag_poland.png",
+            n1: "Zaloguj się",
             s1: "Strona główna",
             s2: "Odkrywaj",
             s3: "O projekcie",
@@ -145,6 +146,45 @@ export const translation = {
             t_04_modal_kinga: "ZURYCH (CH)",
             t_05_modal_kinga: "WYMARZONY KIERUNEK",
             t_06_modal_kinga: "SEUL (KR)"
+        },
+        login_modal: {
+            n1: "CZAS EKSPLOROWAĆ",
+            t1: "Zaloguj się na swoje konto.",
+            t2: "nazwa użytkownika",
+            t3: "hasło",
+            b1: "ZALOGUJ SIĘ",
+            t4: "NIE MASZ JESZCZE KONTA NA PLATFORMIE?",
+            b2: "ZAREJESTRUJ SIĘ"
+        },
+        register_modal: {
+            n1: "ROZPOCZYNAMY PRZYGODĘ?",
+            t1: "Załóż konto na naszej platformie",
+            t2: "adres e-mail",
+            t3: "nazwa użytkownika",
+            t4: "hasło",
+            t5: "potwierdź hasło",
+            b1: "ZAREJESTRUJ SIĘ",
+            t6: "MASZ JUŻ KONTO NA NASZEJ PLATFORMIE?",
+            b2: "ZALOGUJ SIĘ"
+        },
+        sidebar: {
+            t1: "Miło Cię widzieć,",
+            n1: "Zakładki",
+            b1: "Pulpit",
+            b2: "Zniżki",
+            b3: "Odkrywaj",
+            b4: "Ustawienia",
+            b5: "Pomoc",
+            b6: "Powrót do strony głównej",
+            b7: "Wyloguj się"
+        },
+        dashboard: {
+            n1: "Pulpit",
+            n2: "Witaj w Strefie 48!",
+            t1: "Nowe możliwości czekają na Ciebie. Zacznij eksplorować i zbieraj benefity.",
+            n3: "Twoje saldo",
+            n4: "Najnowszy bilans",
+            t2: "Ostatnia transakcja"
         }
     },
     false: {
@@ -152,6 +192,7 @@ export const translation = {
             top: "nie wiem jak przetlumaczyc :)",
             choice: "ENGLISH",
             img: "/desktop/navbar/nvb_flag_uk.png",
+            n1: "Log in",
             s1: "Home page",
             s2: "Discover",
             s3: "About us",
@@ -285,6 +326,45 @@ export const translation = {
             t_04_modal_kinga: "",
             t_05_modal_kinga: "",
             t_06_modal_kinga: ""
+        },
+        login_modal: {
+            n1: "",
+            t1: "",
+            t2: "",
+            t3: "",
+            b1: "",
+            t4: "",
+            b2: ""
+        },
+        register_modal: {
+            n1: "",
+            t1: "",
+            t2: "",
+            t3: "",
+            t4: "",
+            t5: "",
+            b1: "",
+            t6: "",
+            b2: ""
+        },
+        sidebar: {
+            t1: "",
+            n1: "",
+            b1: "",
+            b2: "",
+            b3: "",
+            b4: "",
+            b5: "",
+            b6: "",
+            b7: ""
+        },
+        dashboard: {
+            n1: "",
+            n2: "",
+            t1: "",
+            n3: "",
+            n4: "",
+            t2: "",
         }
     }
 }

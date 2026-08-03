@@ -18,6 +18,14 @@ body {
     font-family: var(--font-geist), sans-serif;
 }
 
+body.logged-in {
+    background-image: url("/desktop/dashboard/pulpit_tlo.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: row;
+}
+
 /* navbar */
 .navbar {
     display: flex;
@@ -124,13 +132,35 @@ body {
     display: none;
 }
 
-.szukaj, .profil {
+.szukaj  {
     cursor: pointer;
     transition-duration: .4s;
 
     &:hover {
         transform: scale(1.18);
     }
+}
+
+.profil img {
+    transition: transform .4s ease;
+}
+
+.profil:hover img {
+    transform: scale(1.18);
+}
+
+.profil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    gap: 10px;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition-duration: .4s;
 }
 
 .navbar-bottom {
@@ -1107,7 +1137,7 @@ select.kontakt-input {
     }
 }
 
-.kontakt-toast-success, .kontakt-toast-error {
+.kontakt-toast-success, .kontakt-toast-error, .kontakt-toast-loading {
     background-color: #0e0d16 !important;
     color: #beff00 !important;
     border:  2px solid #beff00 !important;
@@ -1490,6 +1520,593 @@ select.kontakt-input {
     font-weight: 800;
     font-size: 1.4rem;
 }
+
+/* auth modal */
+.auth-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 36565285627523935;
+    backdrop-filter: blur(5px);
+}
+
+.auth-modal-inside {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 85vh;
+    background-color: #0e0d16;
+    border: 2px solid #6d6993;
+}
+
+.auth-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover {
+        transform: scale(1.04);
+    }
+}
+
+/* login modal */
+.login-modal {   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-modal img {
+    max-height: 95%;
+}
+
+.login-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: 8vh;
+}
+
+.kys-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kys-login h1 {
+    color: #beff00;
+    font-family: var(--font-epilogue);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.login-p-1 {
+    color: #fff;
+    font-family: var(--font-geist);
+    font-size: 1.3rem;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5vh;
+}   
+
+.login-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    width: 90%;
+}
+
+.login-div-p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1rem;
+}
+
+.login-div input {
+    width: 100%;
+    background-color: #151421;
+    height: 5.5vh;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-left: 30px;
+}
+
+.login-form button {
+    width: 90%;
+    height: 5.5vh;
+    border: 2px solid #beff00;
+    color: #fff;
+    font-family: var(--font-geist);
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(to right, #beff00 0%, #0e0d16 40%, #0e0d16 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position .2s ease-in;
+
+    &:hover {
+        background-position: left bottom;
+    }
+}
+
+.jebac-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.3vh;
+}
+
+.jebac-design-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+}
+
+.kreska-donosowa {
+    width: 10%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.jebac-design-2 p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1rem;
+}
+
+.jebac-design button {
+    width: 90%;
+    height: 5.5vh;
+    background-color: #151421;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &:hover {
+        background-color: #beff00;
+        color: #000;
+    }
+}
+
+/* register modal */
+.register-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9vh;
+}
+
+.register-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-top h1 {
+    color: #beff00;
+    font-family: var(--font-epilogue);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.register-top p {
+    color: #fff;
+    font-family: var(--font-geist);
+    font-size: 1.3rem;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.register-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3vh;
+    column-gap: 3vw;
+}
+
+.register-grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.register-grid div p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1rem;
+}
+
+.register-grid div input {
+    width: 34vw;
+    background-color: #151421;
+    height: 5.5vh;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-left: 30px;
+}
+
+.register-submit {
+    width: 71vw;
+    height: 5.5vh;
+    border: 2px solid #beff00;
+    color: #fff;
+    font-family: var(--font-geist);
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(to right, #beff00 0%, #0e0d16 40%, #0e0d16 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position .2s ease-in;
+
+    &:hover {
+        background-position: left bottom;
+    }
+}
+
+.jebac-design-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2vh;
+}
+
+.jebac-design-register-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.7vw;
+}
+
+.kreska-pod-okiem {
+    width: 30%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.jebac-design-register-2 p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1rem;
+}
+
+.jebac-design-register button {
+    width: 71vw;
+    height: 5.5vh;
+    background-color: #151421;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &:hover {
+        background-color: #beff00;
+        color: #000;
+    }
+}
+
+
+/* sidebar */
+.hr-sidebar {
+    background-color: #6d6993;
+    width: 86%;
+    height: 3px;
+    flex-shrink: 0;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 25vw;
+    background-color: transparent;
+    border-right: 2px solid #6d6993;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2rem 0;
+}
+
+.sidebar-div-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    width: 86%;
+}
+
+.sidebar-div-1 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar-div-1 > div h1 {
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.sidebar-div-1 > div p {
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: #fff;
+}
+
+.sidebar-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 86%;
+    gap: 1vh;
+}
+
+.sidebar-p-1 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.sidebar-p-2 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.sidebar-p-3 {
+    color: #6d6993;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.sidebar-div > nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translateX(-4%);
+}
+
+.sidebar-link {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-start;
+    aspect-ratio: 415 / 61;
+    width: 100%;
+    gap: 12px;
+    height: auto;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    transition: all ease;
+    transition-duration: .4s;
+    padding-left: 2vw;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("/desktop/sidebar/zaznaczanie_pasekboczny.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 0;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.sidebar-link > * {
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar-link img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.sidebar-bottom {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 415 / 61;
+    font-family: var(--font-geist), sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    transition: all ease;
+    transition-duration: .4s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #6d6993;
+    border-radius: 10px;
+    background-color: #29283B;
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+/* dashboard */
+.dashboard {
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 3rem 0;
+    gap: 3.9vh;
+}
+
+.dashboard h1 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 3vw;
+}
+
+.dsh-hr {
+    width: 95%;
+    height: 3px;
+    background-color: #6d6993;
+    justify-self: center;
+    align-self: center;
+}
+
+.dsh-div-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 4vw;
+}
+
+.dsh-div-1 h2 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.dsh-div-1 p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.dsh-saldo-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 1vw;
+    gap: 1.5vh;
+}
+
+.dsh-saldo-wrapper > p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-left: 2vw;
+}
+
+.dsh-saldo {
+    width: 95%;
+    height: auto;
+    aspect-ratio: 1393 / 343;
+    background-image: url("/desktop/dashboard/pulpit_saldo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 2vw;
+    margin-left: 1vw;
+}
+
+.dsh-saldo h3 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.dsh-saldo div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+.dsh-saldo div p {
+    color: #fff;
+    font-size: 10rem;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 600;
+}
+
 
 @media only screen and (max-width: 768px) {
     /* navbar */

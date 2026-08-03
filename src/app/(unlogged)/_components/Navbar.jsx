@@ -6,9 +6,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { translation } from "@/constants/translations";
 
+import { useAuth } from "@/app/context/AuthContext";
+
 import Menu from "./Menu";
+import LoginModal from "./LoginModal";
+import RegisterModal from "./RegisterModal";
 
 const Navbar = () => { 
+    const { user } = useAuth();
+
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -17,11 +23,23 @@ const Navbar = () => {
     const [isDiscOpen, setIsDiscOpen] = useState(false);
     const [isMoreOpen, setIsMoreOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    const [isRegisterOpen, setIsRegisterOpen] = useState(false);
     const isPolish = searchParams.get("lang") !== "en";
 
     const t = translation[isPolish];
 
     const closeMenu = () => setIsMenuOpen(false);
+    const closeLogin = () => setIsLoginOpen(false);
+    const closeLoginOpen = () => {
+        setIsLoginOpen(false);
+        setIsRegisterOpen(true);
+    }
+    const closeRegister = () => setIsRegisterOpen(false);
+    const closeRegisterOpen = () => {
+        setIsRegisterOpen(false);
+        setIsLoginOpen(true);
+    }
 
     const languageChange = (lang) => {
         const params = new URLSearchParams(searchParams.toString());
@@ -31,6 +49,11 @@ const Navbar = () => {
         router.push(`${pathname}?${params.toString()}`);
 
         setIsOpen(false);
+    }
+
+    const profileClick = () => {
+        if (user) router.push(isPolish ? "/dashboard" : "/dashboard?lang=en")
+        else setIsLoginOpen(true)
     }
 
     return (
@@ -64,7 +87,8 @@ const Navbar = () => {
                     <button className="szukaj">
                         <img src="/desktop/navbar/nvb_szukaj.png" alt="szukaj"/>
                     </button>
-                    <button className="profil">
+                    <button className="profil" onClick={() => profileClick()}>
+                        {user ? user?.username : t.navbar.n1}
                         <img src="/desktop/navbar/nvb_logowanie.png" alt="profil"/>
                     </button>
                 </div>
@@ -107,6 +131,10 @@ const Navbar = () => {
             </nav>
             <AnimatePresence>
                 {isMenuOpen && <Menu isMenuOpen={isMenuOpen} t={t} closeMenu={closeMenu}/>}
+            </AnimatePresence>
+            <AnimatePresence mode="wait">
+                {isLoginOpen && <LoginModal closeLogin={closeLogin} closeLoginOpen={closeLoginOpen}/>}
+                {isRegisterOpen && <RegisterModal closeRegister={closeRegister} closeRegisterOpen={closeRegisterOpen}/>}
             </AnimatePresence>
         </header>
     )

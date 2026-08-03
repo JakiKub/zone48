@@ -4,6 +4,8 @@ import "../globals.css";
 
 import { Suspense } from 'react';
 
+import { AuthProvider } from '../context/AuthContext';
+
 import Navbar from "./_components/Navbar";
 import Footer from './_components/Footer';
 
@@ -29,13 +31,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pl" className={`h-full antialiased ${epilogue.variable} ${geist.variable}`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
-        <Suspense fallback={<header>szukanie szczescia w zyciu...</header>}>
-          <Navbar/>
-        </Suspense>
-        {children}
-        <Suspense fallback={<footer>szczescie szuka żyda...</footer>}>
-          <Footer/>
-        </Suspense>
+        <AuthProvider>
+          <Suspense fallback={<header>szukanie szczescia w zyciu...</header>}>
+            <Navbar/>
+          </Suspense>
+          {children}
+          <Suspense fallback={<footer>szczescie szuka żyda...</footer>}>
+            <Footer/>
+          </Suspense>
+        </AuthProvider>
       </body>
     </html>
   );

@@ -1,6 +1,11 @@
 import { Epilogue } from 'next/font/google';
 import { Geist } from 'next/font/google';
 import "../globals.css";
+import { Suspense } from 'react';
+
+import Sidebar from './_components/Sidebar';
+
+import { AuthProvider } from '../context/AuthContext';
 
 const epilogue = Epilogue({
     subsets: ['latin'],
@@ -23,7 +28,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="pl" className={` h-full antialiased ${epilogue.variable} ${geist.variable}`}>
-        <body className="min-h-full flex flex-col">{children}</body>
+        <body className="min-h-full flex flex-col logged-in">
+            <AuthProvider>
+                <Suspense fallback={<aside className='sidebar'>deinstalacja ostatniej woli do zycia...</aside>}>
+                    <Sidebar/>
+                </Suspense>
+                {children}
+            </AuthProvider>
+        </body>
         </html>
     );
 }
