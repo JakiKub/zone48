@@ -22,8 +22,10 @@ export async function POST(request) {
 
         if (!isPassCorrect) return NextResponse.json({ error: "cos chyba zespules z loginem lub haslem" }, { status: 401 });
 
+        if (!user.verified) return NextResponse.json({ error: "ruszylbys sie moze do weryfikacji maila, co? inaczej sie nie zalogujesz kochany" }, { status: 403 });
+
         const secret = new TextEncoder().encode(process.env.JWT_SECRET);
-        const token = await new SignJWT({ userId: user._id.toString(), username: user.username, email: user.email, pointsAll: user.pointsAll, pointsNow: user.pointsNow }).setProtectedHeader({ alg: "HS256" }).setIssuedAt().setExpirationTime("1d").sign(secret);
+        const token = await new SignJWT({ userId: user._id.toString(), username: user.username, email: user.email, nationality: user.nationality, pointsAll: user.pointsAll, pointsNow: user.pointsNow }).setProtectedHeader({ alg: "HS256" }).setIssuedAt().setExpirationTime("1d").sign(secret);
         const response = NextResponse.json({ message: "Logged in successfully", user: { _id: user._id, username: user.username, email: user.email } }, { status: 200 });
         
         response.cookies.set("token", token, {

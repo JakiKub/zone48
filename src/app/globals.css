@@ -2027,6 +2027,8 @@ select.kontakt-input {
     background-color: #6d6993;
     justify-self: center;
     align-self: center;
+    border: none;
+    flex-shrink: 0;
 }
 
 .dsh-div-1 {
@@ -2105,6 +2107,473 @@ select.kontakt-input {
     font-size: 10rem;
     font-family: var(--font-geist), sans-serif;
     font-weight: 600;
+}
+
+
+/* help */
+.help {
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 3rem 0;
+    gap: 3.9vh;
+}
+
+.help h1 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 3vw;
+}
+
+.help-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 4vw;
+}
+
+.help-div h2 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.help-div p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.help-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 2vw;
+    gap: 2vh;
+    width: 100%;
+}
+
+.help-form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: .7vh;
+}
+
+.help-form div p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+
+.help-form div input, .help-form div select {
+    background-color: rgba(255, 255, 255, .1);
+    border: none;
+    background-image: url("/desktop/help/pomoc_pasek.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 1393 / 75;
+    width: 95%;
+    height: auto;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    padding-left: 30px;
+}
+
+.help-form div input:-webkit-autofill, .help-form div input:-webkit-autofill:hover,  .help-form div input:-webkit-autofill:focus, .help-form div select:-webkit-autofill {
+    -webkit-text-fill-color: #fff !important;
+    color: #fff !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.help-form div select option {
+    background-color: #6d6993;
+    cursor: pointer;
+    height: 6vh;
+}
+
+.help-form button {
+    background-color: transparent;
+    border: none;
+    background-image: url("/desktop/help/pomoc_pasek2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 289 / 61;
+    width: 15vw;
+    height: auto;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+
+/* settings */
+.settings {
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 3rem 0;
+    gap: 3.9vh;
+}
+
+.settings h1 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 3vw;
+}
+
+.settings-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 4vw;
+}
+
+.settings-div h2 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.settings-div p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.settings-div-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 2vw;
+    gap: 2vh;
+}
+
+.settings-div-3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.3vh;
+}
+
+.settings-div-3 div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.settings-div-3 h3 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.13rem;
+    font-weight: 300;
+    margin-left: 30px;
+}
+
+.settings-div-3 div p {
+    width: 70%;
+    height: auto;
+    aspect-ratio: 1052 / 75;
+    background-image: url("/desktop/settings/ustawienia_przycisk1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: left;
+    vertical-align: middle;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.settings-div-3 div button {
+    width: 21%;
+    height: auto;
+    aspect-ratio: 323 / 75;
+    background-image: url("/desktop/settings/ustawienia_przycisk2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover {
+        transform: scale(1.03);
+    } 
+}
+
+.settings-form {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    inset: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-form-wrapper {
+    width: 60vw;
+    height: 80vh;
+    position: relative;
+    background-color: #0e0d16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6vh;
+    border: 3px solid #6d6993;
+}
+
+.settings-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    justify-content: center;
+}
+
+.settings-top h2 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+
+.settings-top p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.settings-input-div p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.settings-form-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    aspect-ratio: 1 / 1;
+    width: 40px;
+    height: auto;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.settings-input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 75%;
+    gap: 15px;
+}
+
+.settings-form-wrapper input, .settings-form-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    background-color: #201f35;
+    height: 5.8vh;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    padding-left: 30px;
+}
+
+.settings-form-wrapper select option {
+    color: #fff;
+    background-color: #48474d;  
+}
+
+.settings-form-wrapper button[type="submit"] {
+    width: 75%;
+    height: 5.8vh;
+    border: 2px solid #beff00;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #beff00 0%, #0e0d16 40%, #0e0d16 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position .5s ease-in;
+    cursor: pointer;
+
+    &:hover {
+        background-position: left bottom;
+    }
+}
+
+
+/* discounts */
+.discounts {
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 3rem 0;
+    gap: 3.9vh;
+}
+
+.discounts h1 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 3vw;
+}
+
+.discounts-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 4vw;
+}
+
+.discounts-div h2 {
+    color: #fff;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.discounts-div p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.discount-code-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 95%;
+    align-self: center;
+    gap: 15px;
+}
+
+.discount-code-wrapper h3 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-left: 30px;
+}
+
+.discount-code {
+    background-image: url("/desktop/discounts/znizki_pasek1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1393 / 171;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.discount-code h4 {
+    color: #fff;
+    font-weight: 700;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 3.4rem;
+}
+
+.discount-code p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+
+.other-codes-wrapper {
+    width: 95%;
+    align-self: center;
+}
+
+.other-codes-wrapper h3 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-left: 30px;
 }
 
 

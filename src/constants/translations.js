@@ -6,6 +6,8 @@
     n{}_{} - podtytuly czy cos
 */
 
+//edit: wsn to nie ma to juz znaczenia, daje losowo
+
 export const translation = {
     true: {
         navbar: {
@@ -185,6 +187,52 @@ export const translation = {
             n3: "Twoje saldo",
             n4: "Najnowszy bilans",
             t2: "Ostatnia transakcja"
+        },
+        help: {
+            n1: "Pomoc",
+            n2: "Potrzebne wsparcie?",
+            t1: "Jesteśmy tu dla ciebie!",
+            i1: "Imie i nazwisko",
+            i2: "Adres e-mail",
+            i3: "Wybierz sprawę",
+            i4: "Treść wiadomości",
+            b1: "Wyślij"
+        },
+        settings: {
+            n1: "Ustawienia",
+            n2: "Twoje konto, Twoje zasady",
+            t1: "Wszystkie ustawienia Twojego konta w jednym miejscu",
+            t2: "Twoja nazwa użytkownika",
+            t3: "Twój adres e-mail",
+            t4: "Twoje hasło",
+            t5: "Twoja narodowość",
+            b1: "zmień",
+            warn: "hasło niewidoczne ze względów bezpieczeństwa",
+            n3: "ZMIANA NAZWY UŻYTKOWNIKA",
+            t6: "Zaktualizuj dane swojego konta", // to do wszytstkich
+            t7: "wprowadź nową nazwę użytkownika",
+            b3: "ZMIEŃ SWOJĄ NAZWĘ UŻYTKOWNIKA",
+            n4: "ZMIANA ADRESU E-MAIL",
+            t9: "wprowadź nowy e-mail",
+            t10: "hasło",
+            b4: "ZMIEŃ SWÓJ ADRES E-MAIL",
+            n5: "ZMIANA HASŁA",
+            t12: "stare hasło",
+            t13: "nowe hasło",
+            t15: "potwierdź nowe hasło",
+            b5: "ZMIEŃ SWOJE HASŁO",
+            n6: "ZMIANA NARODOWOŚCI",
+            t16: "wybierz nową narodowość z listy",
+            b6: "ZMIEŃ SWOJĄ NARODOWOŚĆ"
+        },
+        discounts: {
+            n1: "Zniżki",
+            n2: "Powody, dlaczego warto zwiedzać",
+            t1: "Zniżki, które wynagradzają każdy pokonany kilometr.",
+            n3: "Twój kod zniżkowy",
+            t2: "Pokaż ten kod przed dokonaniem zamówienia lub zakupu",
+            pkt: "PKT",
+            n4: "Dostępne zniżki"
         }
     },
     false: {
@@ -365,6 +413,57 @@ export const translation = {
             n3: "",
             n4: "",
             t2: "",
+        },
+        help: {
+            n1: "",
+            n2: "",
+            t1: "",
+            i1: "",
+            i2: "",
+            i3: "",
+            i4: "",
+            b1: ""
+        },
+        settings: {
+            n1: "",
+            n2: "",
+            t1: "",
+            t2: "",
+            t3: "",
+            t4: "",
+            t5: "",
+            b1: "",
+            b2: "",
+            warn: "",
+            n3: "",
+            t6: "",
+            t7: "",
+            b3: "",
+            n4: "",
+            t8: "",
+            t9: "",
+            t10: "",
+            b4: "",
+            n5: "",
+            t11: "",
+            t12: "",
+            t13: "",
+            b5: "",
+            n6: "",
+            t14: "",
+            t15: "",
+            t16: "",
+            t17: "",
+            b6: ""
+        },
+        discounts: {
+            n1: "",
+            n2: "",
+            t1: "",
+            t2: "",
+            pkt: "PTS",
+            n3: "",
+            n4: ""
         }
     }
 }

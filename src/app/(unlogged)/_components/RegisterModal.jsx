@@ -50,7 +50,7 @@ const RegisterModal = ({ closeRegister, closeRegisterOpen }) => {
 
         toast.promise(sendPromise, {
             loading: "Registering...",
-            success: "Registered successfully",
+            success: "Registered successfully. Check your email to verify your account",
             error: (err) => err.message
         })
 

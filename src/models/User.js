@@ -4,8 +4,13 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true },
     username: { type: String, required: true },
     password: { type: String, required: true },
+    nationality: { type: String, default: "Unset" },
     pointsAll: { type: Number, default: 48 },
-    pointsNow: { type: Number, default: 48 }
+    pointsNow: { type: Number, default: 48 },
+    verified: { type: Boolean, default: false },
+    verifToken: { type: String },
+    resetToken: { type: String },
+    resetExpires: { type: String }
     },
     { timestamps: true }
 );
