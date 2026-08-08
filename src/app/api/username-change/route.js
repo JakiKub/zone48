@@ -7,20 +7,21 @@ export async function PATCH(request) {
     try {
         const { userId, newUsername } = await request.json();
 
-        if (!userId || !newUsername) return NextResponse.json({ error: "cos zgubiles po drodze" }, { status: 400 });
+        if (!userId || !newUsername) return NextResponse.json({ error: "Wszystkie pola wymagane / All inputs required" }, { status: 400 });
 
         await connectDB();
 
         const exists = await User.findOne({ username: newUsername.trim(), id: { $ne: userId } });
 
-        if (exists) return NextResponse.json({ error: "taki juz istnieje, znajdz sobie inny" }, { status: 400 });
+        if (exists) return NextResponse.json({ error: "Użytkownik już istnieje / This user already exists" }, { status: 400 });
 
         const changedUser = await User.findByIdAndUpdate(userId, { username: newUsername.trim() }, { new: true, runValidators: true });
 
-        if (!changedUser) return NextResponse.json({ error: "taki nie istnieje, zes sobie znalazl" }, { status: 404 });
+        if (!changedUser) return NextResponse.json({ error: "Nie znaleziono użytkownika / User not found" }, { status: 404 });
 
-        return NextResponse.json({ message: "updated username", username: changedUser.username }, { status: 200 })
+        return NextResponse.json({ message: "Pomyślnie zmieniono nazwę użytkownika / Username changed successfully", username: changedUser.username }, { status: 200 })
     } catch (err) {
-        return NextResponse.json({ error: "co sie stalo do dzis nie wiem, religia to nie moje hobby, wolalem siedziec na gorce obserwowac startujace samoloty" }, { status: 500 })
+        console.error(`Błąd w /api/username-change: ${err}`);
+        return NextResponse.json({ error: "Błąd serwera / Internal server error" }, { status: 500 })
     }
 }

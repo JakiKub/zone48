@@ -8,7 +8,7 @@ export async function GET(request) {
         const { searchParams } = new URL(request.url);
         const token = searchParams.get("token");
 
-        if (!token) return NextResponse.json({ error: "po drodze token zgubiles slodziaku" }, { status: 400 });
+        if (!token) return NextResponse.json({ error: "Brak tokena / No token" }, { status: 400 });
 
         await connectDB();
 
@@ -16,7 +16,7 @@ export async function GET(request) {
 
         const user = await User.findOne({ verifToken: hashedToken })
 
-        if (!user) return NextResponse.json({ error: "token zly albo uzyty" }, { status: 400 })
+        if (!user) return NextResponse.json({ error: "Nieprawidłowy albo wykorzystany token / Bad or used token" }, { status: 400 })
 
         user.verified = true;
         user.verifToken = undefined;
@@ -26,6 +26,7 @@ export async function GET(request) {
 
         return NextResponse.redirect(`${domain}/?verified=true`)
     } catch (err) {
-        return NextResponse.json({ error: err.message }, { status: 500 })
+        console.error(`Błąd w /api/email-verification: ${err}`);
+        return NextResponse.json({ error: "Błąd serwera / Internal server error" }, { status: 500 })
     }
 }

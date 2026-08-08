@@ -42,7 +42,7 @@ const HelpContent = () => {
             headers: { "Content-Type" : "application/json" },
             body: JSON.stringify(data)
         }).then(async (res) => {
-            if (!res.ok) throw new Error("bladm serwera");
+            if (!res.ok) throw new Error("Błąd serwera / Internal server error");
             e.target.reset();
             return res.json();
         });

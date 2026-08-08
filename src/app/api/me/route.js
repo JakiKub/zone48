@@ -9,7 +9,7 @@ export async function GET(request) {
         const cookieStore = await cookies();
         const token = cookieStore.get("token")?.value;
 
-        if (!token) return NextResponse.json({ error: "Not authorized / Not logged in" }, { status: 401 });
+        if (!token) return NextResponse.json({ error: "Brak autoryzacji lub niezalogowany / No authorization or not logged in" }, { status: 401 });
 
         const secret = new TextEncoder().encode(process.env.JWT_SECRET);
         const { payload } = await jwtVerify(token, secret);
@@ -18,10 +18,11 @@ export async function GET(request) {
 
         const newUser = await User.findById(payload.userId).select("-password");
 
-        if (!newUser) return NextResponse.json({ error: "seek and you shall find" }, { status: 404 });
+        if (!newUser) return NextResponse.json({ error: "Nie znaleziono użytkownika / User not found" }, { status: 404 });
 
         return NextResponse.json({ user: { id: newUser._id, username: newUser.username, email: newUser.email, nationality: newUser.nationality, pointsAll: newUser.pointsAll, pointsNow: newUser.pointsNow } }, { status: 200 })
     } catch (err) {
-        return NextResponse.json({ error: "wylalo sesje lub token zly, nikt nie wie" }, { status: 401 })
+        console.error(`Błąd w /api/me: ${err}`);
+        return NextResponse.json({ error: "Zły token lub błąd sesji / Wrong token or session error" }, { status: 401 })
     }
 }

@@ -11,13 +11,13 @@ export async function POST(request) {
     try {
         const { username, email, password } = await request.json();
 
-        if (!username || !email || !password) return NextResponse.json({ error: "wszystkie pola wymagane, nie widzisz?" }, { status: 400 })
+        if (!username || !email || !password) return NextResponse.json({ error: "Wszystkie pola wymagane / All inputs required" }, { status: 400 })
 
         await connectDB()
 
         const userExists = await User.findOne({ $or: [{ email }, { username }] });
 
-        if (userExists) return NextResponse.json({ error: "podszywasz sie pod kogos? taki juz istnieje" }, { status: 400 });
+        if (userExists) return NextResponse.json({ error: "Użytkownik już isntieje / This user already exists" }, { status: 400 });
 
         const hashedPass = await bcrypt.hash(password, 10);
 
@@ -33,12 +33,12 @@ export async function POST(request) {
             from: "onboarding@resend.dev", //potem zmienic na no-reply@zone48.com (lub .vercel.app)
             to: email,
             subject: "E-mail validation / Potwierdzenie e-maila",
-            html: `<p>kliknij aby zweryfikowac swoj email: </p><a href=${verifyUrl}>${verifyUrl}</a>`
+            html: `<p>Kliknij, aby zweryfikować swój e-mail: </p><a href=${verifyUrl}>${verifyUrl}</a>`
         })
 
         return NextResponse.json(
             {
-                message: "zarejestrowano pomyslnie, sprawdz maila aby go zweryfikowac <3",
+                message: "Zarejestrowano pomyślnie, sprawdź maila, aby go zweryfikować / Registered successfully, check your e-mail to verify it",
                 user: {
                     id: createUser._id,
                     username: createUser.username,
@@ -47,6 +47,7 @@ export async function POST(request) {
             }, { status: 200 }
         )
     } catch (err) {
-        return NextResponse.json({ error: err.message }, { status: 500 });
+        console.error(`Błąd w /api/register: ${err}`);
+        return NextResponse.json({ error: "Błąd serwera / Internal server error" }, { status: 500 });
     }
 }

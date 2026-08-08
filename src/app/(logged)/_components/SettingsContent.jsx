@@ -109,7 +109,7 @@ const SettingsContent = () => {
         const newPassConfirm = formData.get("new-pass-confirm");
 
         if (newPass !== newPassConfirm) {
-            toast.error("New passwords must be the same");
+            toast.error("Nowe hasła muszą być takie same / New passwords must be the same");
             setIsPassChanging(false);
             return
         }

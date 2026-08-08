@@ -7,21 +7,22 @@ export async function POST(request) {
 
         const { imie, email, temat, wiadomosc } = await request.json();
 
-        if (!imie || !email || !temat || !wiadomosc) return NextResponse.json({ error: "All inputs required" }, { status: 400 })
+        if (!imie || !email || !temat || !wiadomosc) return NextResponse.json({ error: "Wszystkie pola wymagane / All inputs required" }, { status: 400 })
 
         const data = await resend.emails.send({
             from: "Kontakt <onboarding@resend.dev>",
             to: ['contact.zone48@gmail.com'],
             subject: `Nowa wiadomość na temat ${temat}`,
             html: `
-                <p>od ${imie}, ${email}</p>
-                <p>temat: ${temat}</p>
-                <p>tresc: ${wiadomosc}</p>
+                <p>Od ${imie}, ${email}</p>
+                <p>Temat wiadomości: ${temat}</p>
+                <p>Treść: ${wiadomosc}</p>
             `
         });
 
         return NextResponse.json({ success: true, data });
     } catch (err) {
-        return NextResponse.json({ error: err.message }, { status: 500 });
+        console.error(`Błąd w /api/contact: ${err}`);
+        return NextResponse.json({ error: "Błąd serwera / Internal server error" }, { status: 500 });
     }
 }
