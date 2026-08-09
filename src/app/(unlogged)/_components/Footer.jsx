@@ -37,7 +37,7 @@ const Footer = () => {
                         <Link href="https://www.tiktok.com/@wearezone.48?_r=1&_t=ZN-97jbsOxf12k" className="footer-link">TikTok</Link>
                         <Link href="https://www.instagram.com/wearezone.48?igsh=YjVzbDFzOXRoczBi" className="footer-link">Instagram</Link>
                         <Link href="/" className="footer-link">Facebook</Link>
-                        <Link href="https://www.youtube.com/@chaoticism" className="footer-link">Youtube</Link>
+                        <Link href="/" className="footer-link">Youtube</Link>
                         <Link href="/" className="footer-link">Spotify</Link>
                     </nav>
                 </div>
