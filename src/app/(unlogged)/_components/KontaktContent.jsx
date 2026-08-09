@@ -52,12 +52,12 @@ const KontaktContent = () => {
 
     return (
         <main className="kontakt-page">
-            <img src="/desktop/contact/kontakt_grafika.png" alt="zdjecie" className="kontakt-img"/>
-            <img src="/mobile/contact/kontakt_mb_tlo.png" alt="zdjecie" className="kontakt-img-mobile"/>
+            <img src="/desktop/contact/kontakt_grafika.png" alt="tło" className="kontakt-img"/>
+            <img src="/mobile/contact/kontakt_mb_tlo.png" alt="tło" className="kontakt-img-mobile"/>
             <div className="kontakt-top">
                 <h1>{t.contact.n1}</h1>
                 <p>{t.contact.t1}</p>
-                <button onClick={() => document.getElementById("kontaktBottom").scrollIntoView({ behavior: "smooth" })}>{t.contact.b1}<img src="/desktop/contact/kontakt_strzalka.png" alt="strzalka"/></button>
+                <button onClick={() => document.getElementById("kontaktBottom").scrollIntoView({ behavior: "smooth" })}>{t.contact.b1}<img src="/desktop/contact/kontakt_strzalka.png" alt="strzałka"/></button>
             </div>
             <div className="kontakt-bottom" id="kontaktBottom">
                 <div className="kontakt-left">
@@ -65,7 +65,7 @@ const KontaktContent = () => {
                         <p className="kontakt-p-1">{t.contact.t2}</p>
                         <div className="kontakt-wrapper">
                             <div>
-                                <img src="/desktop/contact/kontakt_tel.png" alt="tel"/>
+                                <img src="/desktop/contact/kontakt_tel.png" alt="telefon"/>
                             </div>
                             <p className="kontakt-p-2" id="nrTel">(+48) 73 137 05 41</p>
                         </div>
@@ -92,7 +92,7 @@ const KontaktContent = () => {
                         <p className="kontakt-p-1">{t.contact.t5}</p>
                         <div className="kontakt-wrapper">
                             <div>
-                                <img src="/desktop/contact/kontakt_socialmedia.png" alt="sm"/>
+                                <img src="/desktop/contact/kontakt_socialmedia.png" alt="social-media"/>
                             </div>
                             <p className="kontakt-p-2" id="socMedia">@wearezone.48</p>
                         </div>
@@ -124,7 +124,7 @@ const KontaktContent = () => {
                         <button className="kontakt-send" type="submit" disabled={loading}>{t.contact.b3}</button>
                     </div>
 
-                    <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" } , success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
+                    <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" }, success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
                 </form>
             </div>
         </main>

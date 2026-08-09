@@ -208,7 +208,7 @@ const SettingsContent = () => {
                             <p>{t.settings.t7}</p>
                             <input type="text" name="username-change" required></input>
                         </div>
-                        <button className="settings-form-button" type="submit">{t.settings.b3}</button>
+                        <button className="settings-form-button" type="submit" disabled={isUsernameChanging}>{t.settings.b3}</button>
                     </div>
                 </motion.form>}
             </AnimatePresence>
@@ -252,7 +252,7 @@ const SettingsContent = () => {
                             <p>{t.settings.t15}</p>    
                             <input type="password" name="new-pass-confirm" required></input>
                         </div>
-                        <button className="settings-form-button" type="submit">{t.settings.b5}</button>
+                        <button className="settings-form-button" type="submit" disabled={isPassChanging}>{t.settings.b5}</button>
                     </div>
                 </motion.form>}
             </AnimatePresence>
@@ -272,7 +272,7 @@ const SettingsContent = () => {
                                 <option value="Polska (POL)">Polska (POL)</option>
                             </select>
                         </div>
-                        <button type="submit">{t.settings.b6}</button>
+                        <button type="submit" disabled={setIsNationChanging}>{t.settings.b6}</button>
                     </div>
                 </motion.form>}
             </AnimatePresence>
@@ -282,6 +282,3 @@ const SettingsContent = () => {
 }
 
 export default SettingsContent
-
-
-// poprawic errory und jak jest return nextresponse.json to w tym error piszemy oglnie a dopiero robimy console.error

@@ -54,7 +54,7 @@ const LoginModal = ({ closeLogin, closeLoginOpen }) => {
         }).then(async (res) => {
             const resData = await res.json();
 
-            if (!res.ok) throw new Error(resData.error || "wefvggfbhycbsgkhyfw");
+            if (!res.ok) throw new Error("Błąd serwera / Internal server error");
             e.target.reset();
             return resData;
         });
@@ -112,7 +112,7 @@ const LoginModal = ({ closeLogin, closeLoginOpen }) => {
                         <button onClick={() => closeLoginOpen()} disabled={loading}>{t.login_modal.b2}</button>
                     </div>
                 </div>
-                <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" } , success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
+                <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" }, success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
             </div>
         </motion.div>
     )

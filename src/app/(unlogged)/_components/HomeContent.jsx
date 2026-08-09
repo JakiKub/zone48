@@ -94,7 +94,7 @@ const HomeContent = () => {
             </section>
             <section className="home-3">
                 <img src="/mobile/home/sekcja_3_slogan.png" alt="slogan" className="zdj-1"/>
-                <img src="/mobile/home/glowna_zdj_logowanie.png" alt="tlo" className="zdj-2"/>
+                <img src="/mobile/home/glowna_zdj_logowanie.png" alt="tło" className="zdj-2"/>
                 <div className="home-3-another-wrapper">
                     <h2>{t.home.n3}</h2>
                     <hr className="hr-3-1"/>
@@ -117,8 +117,8 @@ const HomeContent = () => {
                     <hr/>
                 </div>
                 <div className="strzalki-div">
-                    <button onClick={() => przesuniecieLewo()}><img src="/mobile/home/strzalka_lewo.png" alt="strzalka"/></button>
-                    <button onClick={() => przesunieciePrawo()}><img src="/mobile/home/strzalka_prawo.png" alt="strzlka"/></button>
+                    <button onClick={() => przesuniecieLewo()}><img src="/mobile/home/strzalka_lewo.png" alt="strzałka"/></button>
+                    <button onClick={() => przesunieciePrawo()}><img src="/mobile/home/strzalka_prawo.png" alt="strzałka"/></button>
                 </div>
                 <h3 className={fade ? "fade-in" : "fade-out"}><img src="/desktop/home/stronaglowna_flagapl.png" alt="flaga"/>{miasto.n4_1}</h3>
                 <img src={miasto.imgMobile} alt="miasto" className={fade ? "fade-in" : "fade-out"} id="miastoImg"/>
@@ -128,16 +128,12 @@ const HomeContent = () => {
                 <img src="/desktop/home/stronaglowna_mapapl_v2.png" alt="mapa" className={`mapa ${fade ? "fade-in" : "fade-out"}`}></img>
                 <div className="gfhayrfgysrfsg">
                     {t.home.miasto.map((_, i) => (
-                        <button 
-                            key={i}
-                            className={`miasto-button ${index === i ? "active" : ""}`} 
-                            onClick={() => miastoKlik(i)}
-                        ></button>
+                        <button  key={i} className={`miasto-button ${index === i ? "active" : ""}`} onClick={() => miastoKlik(i)}></button>
                     ))}
                 </div>
             </section>
             <section className="home-5">
-                <img src="/mobile/home/glowna_zdj_projekt.png" alt="jakies zdjecie"/>
+                <img src="/mobile/home/glowna_zdj_projekt.png" alt="tło"/>
                 <div className="home-5-wrapper-mobile">
                     <h2>{t.home.n5}</h2>
                     <hr className="home-5-hr"/>

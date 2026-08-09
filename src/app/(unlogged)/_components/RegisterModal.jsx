@@ -43,7 +43,7 @@ const RegisterModal = ({ closeRegister, closeRegisterOpen }) => {
         }).then(async (res) => {
             const resData = await res.json();
 
-            if (!res.ok) throw new Error(resData.error || "hehehehe serwer ma wylew nic nie poradzisz");
+            if (!res.ok) throw new Error("Błąd serwera / Internal server error");
             e.target.reset();
             return resData;
         });
@@ -93,7 +93,7 @@ const RegisterModal = ({ closeRegister, closeRegisterOpen }) => {
                             <input type="password" name="confirm"/>
                         </div>
                     </div>
-                    <button className="register-submit">{t.register_modal.b1}</button>
+                    <button className="register-submit" disabled={loading}>{t.register_modal.b1}</button>
                 </form>
                 <div className="jebac-design-register">
                     <div className="jebac-design-register-2">
@@ -103,7 +103,7 @@ const RegisterModal = ({ closeRegister, closeRegisterOpen }) => {
                     </div>
                     <button onClick={() => closeRegisterOpen()}  disabled={loading}>{t.register_modal.b2}</button>
                 </div>
-                <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" } , success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
+                <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" }, success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
             </div>
         </motion.div>
     )

@@ -13,10 +13,9 @@ const Footer = () => {
     return (
         <footer className="footer">
             <section className="footer-top">
-                {/* <img src="/desktop/home/stronaglowna_stopka_sloganlogo.png" alt="propaganda"/> */}
                 <picture>
                     <source srcSet="/mobile/home/navbar_tel_stopka.png" media="(max-width: 768px)"/>
-                    <img src="/desktop/home/stronaglowna_stopka_sloganlogo.png" alt="propaganda"/>
+                    <img src="/desktop/home/stronaglowna_stopka_sloganlogo.png" alt="slogan"/>
                 </picture>
                 <div>
                     <nav>

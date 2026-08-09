@@ -65,7 +65,7 @@ const Navbar = () => {
                         <motion.button onClick={() => setIsOpen(!isOpen)}>
                             <img src={t.navbar.img} alt="flag"/>
                             <span>{t.navbar.choice}</span>
-                            <img src="/desktop/navbar/nvb_jezyk_strzalka.png" alt="strzalka" className="strzalkaLang"/>
+                            <img src="/desktop/navbar/nvb_jezyk_strzalka.png" alt="strzałka" className="strzalkaLang"/>
                         </motion.button>
 
                         <AnimatePresence>
@@ -97,7 +97,7 @@ const Navbar = () => {
                 <Link className="logo" href={isPolish ? "/" :"/?lang=en"}>
                     <img src="/desktop/navbar/nvb_logo_projektu.png" alt="logo"/>
                 </Link>
-                <button className="menu-bttn" onClick={() => setIsMenuOpen(!isMenuOpen)}><img src={isMenuOpen ? "/mobile/navbar/navbar_tel_zamknijmenu.png" : "/mobile/navbar/navbar_tel_otworzmenu.png"}/></button>
+                <button className="menu-bttn" onClick={() => setIsMenuOpen(!isMenuOpen)}><img src={isMenuOpen ? "/mobile/navbar/navbar_tel_zamknijmenu.png" : "/mobile/navbar/navbar_tel_otworzmenu.png"} alt="menu-open-close"/></button>
                 <Link href={isPolish ? "/" :"/?lang=en"} className="navbar-link">{t.navbar.s1}</Link>
                 {/* tutaj wpisac inne sciezki jak beda gotowe :)) */}
                 <div className="discover">

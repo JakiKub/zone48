@@ -93,7 +93,7 @@ const HelpContent = () => {
                 </div>
                 <button type="submit" disabled={loading2}>{t.help.b1}</button>
             </form>
-            <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" } , success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
+            <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" }, success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
         </main>
     )
 }

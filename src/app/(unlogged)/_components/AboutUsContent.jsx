@@ -19,17 +19,17 @@ const AboutUsContent = () => {
     return (
         <main className="o-nas-page">
             <section className="o-nas-section-1">
-                <img src="/desktop/about-us/(o_o).png" className="o-nas-1-img" alt="efhyiruxwbr"/>
-                <img src="/mobile/about-us/oprojekcie_mb_1.png" className="o-nas-1-img-mobile" alt="wehjgw"/>
+                <img src="/desktop/about-us/(o_o).png" className="o-nas-1-img" alt="tlo"/>
+                <img src="/mobile/about-us/oprojekcie_mb_1.png" className="o-nas-1-img-mobile" alt="tło"/>
                 <h1>{t.about_us.n1}</h1>
                 <p>{t.about_us.t1}</p>
-                <button onClick={() => document.getElementById("oNasSekcjaDwa").scrollIntoView({ behavior: "smooth" })}>{t.about_us.b1} <img src="/desktop/home/stronaglowna_strzalkawdol.png" alt="strzalka" className="strzalkaScroll"/></button>
+                <button onClick={() => document.getElementById("oNasSekcjaDwa").scrollIntoView({ behavior: "smooth" })}>{t.about_us.b1} <img src="/desktop/home/stronaglowna_strzalkawdol.png" alt="strzałka" className="strzalkaScroll"/></button>
             </section>
             <hr className="o-nas-hr"/>
             <section className="o-nas-section-2" id="oNasSekcjaDwa">
                 <div className="o-nas-2-top">
-                    <img src="/desktop/about-us/O_o.png" className="o-nas-2-img" alt="gyreygqr"/>
-                    <img src="/mobile/about-us/oprojekcie_mb_2.png" className="o-nas-2-img-mobile" alt="erhgbjgcqucr"/>
+                    <img src="/desktop/about-us/O_o.png" className="o-nas-2-img" alt="tlo"/>
+                    <img src="/mobile/about-us/oprojekcie_mb_2.png" className="o-nas-2-img-mobile" alt="tło"/>
                     <div className="kys-igor">
                         <h2>{t.about_us.n2}</h2>
                         <hr className="kys"/>
@@ -116,7 +116,7 @@ const AboutUsContent = () => {
                 <AnimatePresence>
                     {igorModal && <motion.div className="osoba-div" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .7, ease: "easeInOut" }}>
                         <div className="osoba-div-inside">
-                            <button onClick={() => setIgorModal(!igorModal)}><img src="/desktop/about-us/zespol_x.png"/></button>
+                            <button onClick={() => setIgorModal(!igorModal)}><img src="/desktop/about-us/zespol_x.png" alt="close"/></button>
                             <img src="/desktop/about-us/zespol_igor2.png" alt="igor"/>
                             <h2>IGOR</h2>
                             <h3>{t.about_us.t_01_modal_igor}</h3>
@@ -135,7 +135,7 @@ const AboutUsContent = () => {
                     </motion.div>}
                     {jakubModal && <motion.div className="osoba-div" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .7, ease: "easeInOut" }}>
                         <div className="osoba-div-inside">
-                            <button onClick={() => setJakubModal(!jakubModal)}><img src="/desktop/about-us/zespol_x.png"/></button>
+                            <button onClick={() => setJakubModal(!jakubModal)}><img src="/desktop/about-us/zespol_x.png" alt="close"/></button>
                             <img src="/desktop/about-us/zespol_jakub2.png" alt="jakub"/>
                             <h2>JAKUB</h2>
                             <h3>{t.about_us.t_01_modal_jakub}</h3>
@@ -154,7 +154,7 @@ const AboutUsContent = () => {
                     </motion.div>}
                     {agataModal && <motion.div className="osoba-div" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .7, ease: "easeInOut" }}>
                         <div className="osoba-div-inside">
-                            <button onClick={() => setAgataModal(!agataModal)}><img src="/desktop/about-us/zespol_x.png"/></button>
+                            <button onClick={() => setAgataModal(!agataModal)}><img src="/desktop/about-us/zespol_x.png" alt="close"/></button>
                             <img src="/desktop/about-us/zespol_agata2.png" alt="agata"/>
                             <h2>AGATA</h2>
                             <h3>{t.about_us.t_01_modal_agata}</h3>
@@ -173,7 +173,7 @@ const AboutUsContent = () => {
                     </motion.div>}
                     {kingaModal && <motion.div className="osoba-div" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .7, ease: "easeInOut" }}>
                         <div className="osoba-div-inside">
-                            <button onClick={() => setKingaModal(!kingaModal)}><img src="/desktop/about-us/zespol_x.png"/></button>
+                            <button onClick={() => setKingaModal(!kingaModal)}><img src="/desktop/about-us/zespol_x.png" alt="close"/></button>
                             <img src="/desktop/about-us/zespol_kinga2.png" alt="kinga"/>
                             <h2>KINGA</h2>
                             <h3>{t.about_us.t_01_modal_kinga}</h3>
