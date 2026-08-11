@@ -20,7 +20,7 @@ export async function POST(request) {
             `
         });
 
-        return NextResponse.json({ success: true, data });
+        return NextResponse.json({ message: "Pomyślnie wysłano wiadomość / Message sent successfully", success: true, data });
     } catch (err) {
         console.error(`Błąd w /api/contact: ${err}`);
         return NextResponse.json({ error: "Błąd serwera / Internal server error" }, { status: 500 });

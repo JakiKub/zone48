@@ -41,8 +41,8 @@ const SettingsContent = () => {
         })
 
         toast.promise(sendPromise, {
-            loading: "Saving...",
-            success: "Username changed successfully",
+            loading: isPolish ? "Zapisywanie..." : "Saving...",
+            success: (success) => success.message,
             error: (err) => err.message
         });
 
@@ -80,8 +80,8 @@ const SettingsContent = () => {
         })
 
         toast.promise(sendPromise, {
-            loading: "Saving...",
-            success: "Nationality changed successfully",
+            loading: isPolish ? "Zapisywanie..." : "Saving...",
+            success: (success) => success.message,
             error: (err) => err.message
         });
 
@@ -127,8 +127,8 @@ const SettingsContent = () => {
         });
 
         toast.promise(sendPromise, {
-            loading: "Saving...",
-            success: "Password changed successfully",
+            loading: isPolish ? "Zapisywanie..." : "Saving...",
+            success: (success) => success.message,
             error: (err) => err.message
         });
 
@@ -272,11 +272,10 @@ const SettingsContent = () => {
                                 <option value="Polska (POL)">Polska (POL)</option>
                             </select>
                         </div>
-                        <button type="submit" disabled={setIsNationChanging}>{t.settings.b6}</button>
+                        <button type="submit" disabled={isNationChanging}>{t.settings.b6}</button>
                     </div>
                 </motion.form>}
             </AnimatePresence>
-            <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" } , success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
         </main>
     )
 }

@@ -4,7 +4,8 @@ import { translation } from "@/constants/translations";
 import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast"
+import toast from "react-hot-toast"
+import Link from "next/link";
 
 import { useAuth } from "@/app/context/AuthContext";
 
@@ -54,16 +55,16 @@ const LoginModal = ({ closeLogin, closeLoginOpen }) => {
         }).then(async (res) => {
             const resData = await res.json();
 
-            if (!res.ok) throw new Error("Błąd serwera / Internal server error");
+            if (!res.ok) throw new Error(resData.error);
             e.target.reset();
             return resData;
         });
 
         toast.promise(sendPromise, {
-            loading: "Logging in...",
-            success: "Logged in successfully",
+            loading: isPolish ? "Logowanie..." : "Logging in...",
+            success: (success) => success.message,
             error: (err) => err.message
-        })
+        });
 
         try {
             await sendPromise;
@@ -100,6 +101,7 @@ const LoginModal = ({ closeLogin, closeLoginOpen }) => {
                         <div className="login-div">
                             <p className="login-div-p">{t.login_modal.t3}</p>
                             <input type="password" name="password"/>
+                            <Link href="/forgot-password" className="login-div-p" onClick={() => closeLogin()}>{t.login_modal.forgot}</Link>
                         </div>
                         <button type="submit">{t.login_modal.b1}</button>
                     </form>
@@ -112,7 +114,6 @@ const LoginModal = ({ closeLogin, closeLoginOpen }) => {
                         <button onClick={() => closeLoginOpen()} disabled={loading}>{t.login_modal.b2}</button>
                     </div>
                 </div>
-                <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" }, success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
             </div>
         </motion.div>
     )

@@ -42,14 +42,16 @@ const HelpContent = () => {
             headers: { "Content-Type" : "application/json" },
             body: JSON.stringify(data)
         }).then(async (res) => {
-            if (!res.ok) throw new Error("Błąd serwera / Internal server error");
+            const resData = await res.json();
+
+            if (!res.ok) throw new Error(resData.error);
             e.target.reset();
-            return res.json();
+            return resData;
         });
 
         toast.promise(sendPromise, {
-            loading: 'Sending a message...',
-            success: 'Message sent successfully',
+            loading: isPolish ? "Wysyłanie wiadomości..." : "Sending the message...",
+            success: (success) => success.message,
             error: (err) => err.message
         });
 
@@ -93,7 +95,6 @@ const HelpContent = () => {
                 </div>
                 <button type="submit" disabled={loading2}>{t.help.b1}</button>
             </form>
-            <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" }, success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
         </main>
     )
 }

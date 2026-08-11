@@ -4,7 +4,7 @@ import { translation } from "@/constants/translations"
 import { useSearchParams } from "next/navigation"
 import { motion } from "framer-motion";
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const RegisterModal = ({ closeRegister, closeRegisterOpen }) => {
     const searchParams = useSearchParams();
@@ -43,24 +43,22 @@ const RegisterModal = ({ closeRegister, closeRegisterOpen }) => {
         }).then(async (res) => {
             const resData = await res.json();
 
-            if (!res.ok) throw new Error("Błąd serwera / Internal server error");
+            if (!res.ok) throw new Error(resData.error);
             e.target.reset();
             return resData;
         });
 
         toast.promise(sendPromise, {
-            loading: "Registering...",
-            success: "Registered successfully. Check your email to verify your account",
+            loading: isPolish ? "Rejestrowanie..." : "Registering...",
+            success: (success) => success.message,
             error: (err) => err.message
         })
 
         try {
             await sendPromise;
-            setTimeout(() => {
-                closeRegister()
-            }, 3000)
+            setTimeout(() => { closeRegister() }, 3000)
         } catch (err) {
-            console.error(err)
+            console.error(err);
         } finally {
             setLoading(false);
         }
@@ -103,7 +101,6 @@ const RegisterModal = ({ closeRegister, closeRegisterOpen }) => {
                     </div>
                     <button onClick={() => closeRegisterOpen()}  disabled={loading}>{t.register_modal.b2}</button>
                 </div>
-                <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" }, success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
             </div>
         </motion.div>
     )

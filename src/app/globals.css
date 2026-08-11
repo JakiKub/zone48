@@ -18,7 +18,7 @@ body {
     font-family: var(--font-geist), sans-serif;
 }
 
-body.logged-in {
+.logged-in {
     background-image: url("/desktop/dashboard/pulpit_tlo.png");
     background-position: center;
     background-size: cover;
@@ -1142,7 +1142,7 @@ select.kontakt-input {
     color: #beff00 !important;
     border:  2px solid #beff00 !important;
     border-radius: .1rem !important;
-    z-index: 100000001 !important;
+    z-index: 2147483647 !important;
 }
 
 
@@ -1525,7 +1525,7 @@ select.kontakt-input {
 .auth-modal {
     position: fixed;
     inset: 0;
-    z-index: 36565285627523935;
+    z-index: 2147483646;
     backdrop-filter: blur(5px);
 }
 
@@ -2562,7 +2562,6 @@ select.kontakt-input {
     font-weight: 400;
 }
 
-
 .other-codes-wrapper {
     width: 95%;
     align-self: center;
@@ -2576,6 +2575,143 @@ select.kontakt-input {
     margin-left: 30px;
 }
 
+
+/* forgot-password */
+.forgot-password {
+    height: 80vh;
+    background-color: #151421;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot-password h1 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 700;
+    font-size: 3.1em;
+}
+
+.forgot-password form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.forgot-password form p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.forgot-password form input {
+    width: 30vw;
+    height: 6vh;
+    border: 2px solid #6d6993;
+    background-color: #0e0d16;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding-left: 30px;
+}
+
+.forgot-password form button {
+    width: 25vw;
+    height: 6vh;
+    border: 2px solid #beff00;
+    background-color: #201f35;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover {
+        background-color: #beff00;
+        color: #000;
+    }
+}
+
+
+/* reset-password */
+.reset-password {
+    height: 80vh;
+    background-color: #151421;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.reset-password h1 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.reset-password form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+}
+
+.reset-password form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.2vh;
+}
+
+.reset-password form div p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-left: 15px;
+}
+
+.reset-password form div input {
+    width: 30vw;
+    height: 6vh;
+    border: 2px solid #6d6993;
+    background-color: #0e0d16;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding-left: 30px;
+}
+
+.reset-password form button {
+    width: 25vw;
+    height: 6vh;
+    border: 2px solid #beff00;
+    background-color: #201f35;
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover {
+        background-color: #beff00;
+        color: #000;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     /* navbar */

@@ -1,46 +1,19 @@
-import { Epilogue } from 'next/font/google';
-import { Geist } from 'next/font/google';
-import "../globals.css";
-
 import { Suspense } from 'react';
-
-import { AuthProvider } from '../context/AuthContext';
 
 import Navbar from "./_components/Navbar";
 import Footer from './_components/Footer';
 
-const epilogue = Epilogue({
-  subsets: ['latin'],
-  variable: '--font-epilogue',
-});
 
-const geist = Geist({
-  subsets: ['latin'],
-  variable: '--font-geist',
-});
-
-export const metadata = {
-  title: "Zone 48",
-  description: "",
-  icons: {
-    icon: "/misc/logo_strony_zone48.svg"
-  }
-};
-
-export default function RootLayout({ children }) {
+export default function UnloggedLayout({ children }) {
   return (
-    <html lang="pl" className={`h-full antialiased ${epilogue.variable} ${geist.variable}`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col">
-        <AuthProvider>
-          <Suspense fallback={<header>szukanie szczescia w zyciu...</header>}>
-            <Navbar/>
-          </Suspense>
-          {children}
-          <Suspense fallback={<footer>szczescie szuka żyda...</footer>}>
-            <Footer/>
-          </Suspense>
-        </AuthProvider>
-      </body>
-    </html>
+    <div className="flex flex-col min-h-screen w-full">
+      <Suspense fallback={<header>szukanie szczescia w zyciu...</header>}>
+        <Navbar/>
+      </Suspense>
+      {children}
+      <Suspense fallback={<footer>szczescie szuka żyda...</footer>}>
+        <Footer/>
+      </Suspense>
+    </div>
   );
 }

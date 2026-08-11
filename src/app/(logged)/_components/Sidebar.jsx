@@ -16,7 +16,7 @@ const Sidebar = () => {
     const t = translation[isPolish];
 
     const handleLogout = async () => {
-        router.push("/");
+        router.push(isPolish ? "/" : "/?lang=en");
         await logout();
     }
 

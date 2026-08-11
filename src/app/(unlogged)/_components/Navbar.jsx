@@ -113,7 +113,6 @@ const Navbar = () => {
                     </AnimatePresence>
                 </div>
                 <Link href={isPolish ? "/o-nas" : "/o-nas?lang=en"} className="navbar-link">{t.navbar.s3}</Link>
-                {/* <Link href="/" className="navbar-link">{t.navbar.s4}</Link> */}
                 <Link href="/" className="navbar-link">{t.navbar.s5}</Link>
                 <Link href={isPolish ? "/kontakt" : "/kontakt?lang=en"} className="navbar-link">{t.navbar.s6}</Link>
                 <div className="more">

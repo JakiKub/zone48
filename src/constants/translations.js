@@ -156,7 +156,8 @@ export const translation = {
             t3: "hasło",
             b1: "ZALOGUJ SIĘ",
             t4: "NIE MASZ JESZCZE KONTA NA PLATFORMIE?",
-            b2: "ZAREJESTRUJ SIĘ"
+            b2: "ZAREJESTRUJ SIĘ",
+            forgot: "Zapomniałeś hasła?"
         },
         register_modal: {
             n1: "ROZPOCZYNAMY PRZYGODĘ?",
@@ -233,6 +234,17 @@ export const translation = {
             t2: "Pokaż ten kod przed dokonaniem zamówienia lub zakupu",
             pkt: "PKT",
             n4: "Dostępne zniżki"
+        },
+        forgot_password: {
+            n1: "ZAPOMNIAŁEŚ HASŁA?",
+            t1: "Wpisz swojego e-maila",
+            b1: "Wyślij link resetujący"
+        },
+        reset_password: {
+            n1: "WPISZ NOWE HASŁO",
+            t1: "hasło",
+            t2: "potwierdź hasło",
+            b1: "Zmień hasło"
         }
     },
     false: {
@@ -382,7 +394,8 @@ export const translation = {
             t3: "",
             b1: "",
             t4: "",
-            b2: ""
+            b2: "",
+            forgot: "Forgot password?"
         },
         register_modal: {
             n1: "",
@@ -464,6 +477,17 @@ export const translation = {
             pkt: "PTS",
             n3: "",
             n4: ""
+        },
+        forgot_password: {
+            n1: "",
+            t1: "",
+            b1: ""
+        },
+        reset_password: {
+            n1: "",
+            t1: "",
+            t2: "",
+            b1: ""
         }
     }
 }

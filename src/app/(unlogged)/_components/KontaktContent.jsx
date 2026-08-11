@@ -3,7 +3,7 @@
 import { translation } from "@/constants/translations";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const KontaktContent = () => {
     const searchParams = useSearchParams();
@@ -15,6 +15,9 @@ const KontaktContent = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (loading) return
+
         setLoading(true);
 
         const formData = new FormData(e.target);
@@ -30,15 +33,17 @@ const KontaktContent = () => {
             headers: { "Content-Type" : "application/json" },
             body: JSON.stringify(data)
         }).then(async (res) => {
-            if (!res.ok) throw new Error("bladm serwera");
+            const resData = await res.json();
+
+            if (!res.ok) throw new Error(resData.error);
             e.target.reset();
-            return res.json();
+            return resData;
         });
 
         toast.promise(sendPromise, {
-            loading: 'Sending a message...',
-            success: 'Message sent successfully',
-            error: 'Message couldn\'t be sent'
+            loading: isPolish ? "Wysyłanie wiadomości..." : "Sending the message...",
+            success: (success) => success.message,
+            error: (err) => err.message
         });
 
         try {
@@ -123,8 +128,6 @@ const KontaktContent = () => {
                         </div>
                         <button className="kontakt-send" type="submit" disabled={loading}>{t.contact.b3}</button>
                     </div>
-
-                    <Toaster position="top center" toastOptions={{ loading: { className: "kontakt-toast-loading" }, success: { className: "kontakt-toast-success" }, error: { className: "kontakt-toast-error" } }} reverseOrder={false} className/>
                 </form>
             </div>
         </main>
