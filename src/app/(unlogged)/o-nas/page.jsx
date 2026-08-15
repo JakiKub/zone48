@@ -9,7 +9,7 @@ export const metadata = {
 
 const AboutUsPage = () => {
     return (
-        <Suspense fallback={<main className="o-nas-page">ladowanie telefonu</main>}>
+        <Suspense fallback={<main className="o-nas-page">Ładowanie o nas....</main>}>
             <AboutUsContent/>
         </Suspense>
     )

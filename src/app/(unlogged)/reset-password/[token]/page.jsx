@@ -9,7 +9,7 @@ export const metadata = {
 
 const ResetPassword = () => {
     return (
-        <Suspense fallback={<main className="reset-password">Ładowanie paneli słonecznych</main>}>
+        <Suspense fallback={<main className="reset-password">Ładowanie...</main>}>
             <ResetPasswordContent/>
         </Suspense>
     )

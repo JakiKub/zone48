@@ -9,7 +9,7 @@ export const metadata = {
 
 const Help = () =>  {
     return (
-        <Suspense fallback={<main className="help">usuwanie fotowoltaiki...</main>}>
+        <Suspense fallback={<main className="help">Ładowanie pomocy...</main>}>
             <HelpContent/>
         </Suspense>
     )

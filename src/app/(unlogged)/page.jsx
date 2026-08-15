@@ -9,7 +9,7 @@ export const metadata = {
 
 const HomePage = () => {
   return (
-    <Suspense fallback={<main className="home-page">szukanie ostatnich komórek mózgowych...</main>}>
+    <Suspense fallback={<main className="home-page">Ładowanie strony głównej...</main>}>
       <HomeContent/>
     </Suspense>
   )

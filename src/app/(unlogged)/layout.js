@@ -7,11 +7,11 @@ import Footer from './_components/Footer';
 export default function UnloggedLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen w-full">
-      <Suspense fallback={<header>szukanie szczescia w zyciu...</header>}>
+      <Suspense fallback={<header>Ładowanie navbaru...</header>}>
         <Navbar/>
       </Suspense>
       {children}
-      <Suspense fallback={<footer>szczescie szuka żyda...</footer>}>
+      <Suspense fallback={<footer>Ładowanie stopki...</footer>}>
         <Footer/>
       </Suspense>
     </div>

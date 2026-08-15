@@ -9,7 +9,7 @@ export const metadata = {
 
 const Settings = () => {
     return (
-        <Suspense fallback={<main className="settings">powoli koncza mi sie pomysly na te fallbacki...</main>}>
+        <Suspense fallback={<main className="settings">Ładowanie ustawień...</main>}>
             <SettingsContent/>
         </Suspense>
     )

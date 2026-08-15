@@ -9,7 +9,7 @@ export const metadata = {
 
 const ForgotPassword = () => {
     return (
-        <Suspense fallback={<main className="forgot-password">Loading...</main>}>
+        <Suspense fallback={<main className="forgot-password">Ładowanie...</main>}>
             <ForgotPasswordContent/>
         </Suspense>
     )

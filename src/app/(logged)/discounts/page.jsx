@@ -9,7 +9,7 @@ export const metadata = {
 
 const Discounts = () => {
     return (
-        <Suspense fallback={<main className="discounts">ladowanie baterii socjalnych...</main>}>
+        <Suspense fallback={<main className="discounts">Ładowanie zniżek...</main>}>
             <DiscountsContent/>
         </Suspense>
     )

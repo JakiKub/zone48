@@ -36,7 +36,7 @@ Zone 48 is a project carried out as a part of a nationwide "Zwolnieni z Teorii" 
 
 - [**Next.js 16.2.6**](https://nextjs.org)
 - [**Bcrypt.js 3.0.3**](https://www.npmjs.com/package/bcryptjs)
-- [**Crypto**](https://nodejs.org/api/crypto.html)
+- [**Crypto 1.0.1**](https://nodejs.org/api/crypto.html)
 - [**Framer Motion 12.40.0**](https://motion.dev)
 - [**jose 6.2.5**](https://www.npmjs.com/package/jose)
 - [**MongoDB 7.5.0 / mongoose 9.8.0**](https://www.mongodb.com)
