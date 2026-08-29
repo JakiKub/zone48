@@ -65,7 +65,7 @@ const RegisterModal = ({ closeRegister, closeRegisterOpen }) => {
     }
     
     return (
-        < motion.div className="auth-modal register-wrapper" initial={{ opacity: 0, }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .4 }}>
+        <motion.div className="auth-modal register-wrapper" initial={{ opacity: 0, }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .4 }}>
             <div className="auth-modal-inside register-modal">
                 <button className="auth-close" onClick={() => closeRegister()}><img src="/desktop/register-modal/x.png" alt="close button"/></button>
                 <div className="register-top">

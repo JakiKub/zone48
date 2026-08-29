@@ -7,13 +7,13 @@ import Link from "next/link";
 import { translation } from "@/constants/translations";
 
 import { useAuth } from "@/app/context/AuthContext";
+import { useModal } from "@/app/context/ModalContext";
 
 import Menu from "./Menu";
-import LoginModal from "./LoginModal";
-import RegisterModal from "./RegisterModal";
 
 const Navbar = () => { 
     const { user } = useAuth();
+    const { openLogin, openRegister } = useModal();
 
     const router = useRouter();
     const pathname = usePathname();
@@ -30,16 +30,24 @@ const Navbar = () => {
     const t = translation[isPolish];
 
     const closeMenu = () => setIsMenuOpen(false);
-    const closeLogin = () => setIsLoginOpen(false);
+    /*const closeLogin = () => setIsLoginOpen(false);
     const closeLoginOpen = () => {
         setIsLoginOpen(false);
         setIsRegisterOpen(true);
+    }
+    const openLogin = () => {
+        setIsLoginOpen(true);
+        closeMenu()
     }
     const closeRegister = () => setIsRegisterOpen(false);
     const closeRegisterOpen = () => {
         setIsRegisterOpen(false);
         setIsLoginOpen(true);
     }
+    const openRegister = () => {
+        setIsRegisterOpen(true);
+        closeMenu();
+    }*/
 
     const languageChange = (lang) => {
         const params = new URLSearchParams(searchParams.toString());
@@ -53,7 +61,7 @@ const Navbar = () => {
 
     const profileClick = () => {
         if (user) router.push(isPolish ? "/dashboard" : "/dashboard?lang=en")
-        else setIsLoginOpen(true)
+        else openLogin()
     }
 
     return (
@@ -129,12 +137,12 @@ const Navbar = () => {
                 </div>
             </nav>
             <AnimatePresence>
-                {isMenuOpen && <Menu isMenuOpen={isMenuOpen} t={t} closeMenu={closeMenu}/>}
+                {isMenuOpen && <Menu isMenuOpen={isMenuOpen} t={t} closeMenu={closeMenu} setIsLoginOpen={openLogin} setIsRegisterOpen={openRegister}/>}
             </AnimatePresence>
-            <AnimatePresence mode="wait">
+            {/* <AnimatePresence mode="wait">
                 {isLoginOpen && <LoginModal closeLogin={closeLogin} closeLoginOpen={closeLoginOpen}/>}
                 {isRegisterOpen && <RegisterModal closeRegister={closeRegister} closeRegisterOpen={closeRegisterOpen}/>}
-            </AnimatePresence>
+            </AnimatePresence> */}
         </header>
     )
 }

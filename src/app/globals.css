@@ -24,6 +24,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     flex-direction: row;
+    overflow-x: hidden;
 }
 
 /* navbar */
@@ -135,6 +136,7 @@ body {
 .szukaj  {
     cursor: pointer;
     transition-duration: .4s;
+    display: none;
 
     &:hover {
         transform: scale(1.18);
@@ -871,7 +873,7 @@ body {
     max-width: 60%;
 }
 
-.home-5 button {
+.o-nas-link {
     color: #fff;
     font-family: var(--font-epilogue), sans-serif;
     font-weight: 800;
@@ -2713,7 +2715,23 @@ select.kontakt-input {
     }
 }
 
+/* welcome navbar */
+.welcome {
+    display: none;
+}
+
+
+/* tabbar */
+.tabbar {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
+    /* misc */
+    .logged-in {
+        flex-direction: column;
+    }
+
     /* navbar */
     .szukaj img, .profil img {
         width: 20px;
@@ -2787,6 +2805,10 @@ select.kontakt-input {
         right: 0;
         left: auto;
         width: 130px;
+    }
+
+    .profil {
+        font-size: .71rem;
     }
 
     .navbar-bottom {
@@ -3300,6 +3322,10 @@ select.kontakt-input {
         justify-content: center;
     }
 
+    .home-5-wrapper p {
+        font-size: 1.1rem;
+    }
+
     .hr-kolejne {
         width: 75%;
         height: 3px;
@@ -3307,7 +3333,7 @@ select.kontakt-input {
         border: none;
     }
 
-    .home-5 button {
+    .o-nas-link {
         width: 230px;
         height: 55px;
         font-size: 1.1rem;
@@ -3705,5 +3731,420 @@ select.kontakt-input {
         width: auto;
         white-space: nowrap;
         flex-shrink: 0;
+    }
+
+
+    /* sidebar */
+    .sidebar {
+        display: none;
+    }
+
+
+    /* welcome navbar */
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.3vh;
+        padding-top: 10px;
+    }
+
+    .welcome > div {
+        display: flex;
+        flex-direction: row ;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .welcome > div button, .button-welcome {
+        aspect-ratio: 1 / 1;
+        max-width: 41px;
+        min-width: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcome > div > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .welcome > div > div img {
+        max-width: 50px;
+        min-width: 40px;
+        aspect-ratio: 76 / 68;
+        height: auto;
+    }
+
+    .welcome > div > div > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .welcome > div > div > div * {
+        color: #fff;
+        font-family: var(--font-geist), sans-serif;
+    }
+
+    .welcome-p-1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-p-2 {
+        font-size: .89rem;
+    }
+
+    .welcome hr {
+        height: 2px;
+        border: none;
+        width: 100%;
+        background-color: #6d6993;
+    }
+
+    .welcome h1, .welcome h1 * {
+        color: #fff;
+        font-family: var(--font-geist), sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .welcome h1 {
+        padding-left: 30px;
+    }
+
+    /* tabbar */
+    .tabbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 11vh;
+        background-color: #201f35;
+        border-top: 2px solid #6d6993;
+        /* align-self: flex-end; */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+    .tabbar a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-size: 100% 100%;
+        height: 100%;
+        color: #fff;
+        font-family: var(--font-geist), sans-serif;
+        font-weight: 300;
+        font-size: .8rem;
+        transition: all .3s;
+    }
+
+    .tabbar a.active {
+        background-image: url("/mobile/tabbar/tlo_zalogowany_mobilna.png");
+    }
+
+    .tabbar a img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+
+    /* global */
+    .dashboard, .settings, .discounts, .help {
+        width: 100%;
+        height: auto;
+        gap: 2vh;
+    }
+
+    .dashboard h1, .discounts h1, .settings h1, .help h1 {
+        display: none;
+    }
+
+    .dsh-hr:first-of-type {
+        display: none;
+    }
+
+    .dsh-hr {
+        height: 2px;
+        width: 95%;
+        align-self: center;
+    }
+
+
+    /* dashboard */
+    .dashboard {
+        padding-top: 21px;
+    }
+
+    .dsh-div-1 h2 {
+        font-size: 1.2rem;
+    }
+
+    .dsh-div-1 p {
+        font-size: .9rem;
+        max-width: 72%;
+    }
+
+    .dsh-saldo-wrapper {
+        justify-self: center;
+        width: 100%;
+        margin-left: unset;
+    }
+
+    .dsh-saldo-wrapper > p {
+        margin-left: 6vw;
+    }
+
+    .dsh-saldo {
+        aspect-ratio: 978 / 797;
+        width: 92%;
+        height: auto;
+        background-image: url("/mobile/dashboard/pulpit1.png");
+        align-items: center;
+        justify-content: center;
+        margin-left: unset;
+        align-self: center;
+    }
+
+    .dsh-saldo h3 {
+        font-size: 1.3rem;
+    }
+
+    .dsh-saldo div p {
+        font-size: 6rem;
+    }
+
+    .dsh-saldo div img {
+        max-width: 70px;
+    }
+
+
+    /* discounts */
+    .discounts {
+        padding-top: 21px;
+    }
+
+    .discounts-div h2 {
+        font-size: 1.3rem;
+    }
+
+    .discounts-div p {
+        font-size: .9rem;
+        max-width: 82%;
+    }
+
+    .discount-code-wrapper {
+        gap: 1.2vh;
+        width: 92%;
+    }
+
+    .discount-code-wrapper h3 {
+        font-size: 1.1rem;
+    }
+
+    .discount-code {
+        background-image: url("/mobile/discounts/kod_znizkowy.png");
+        aspect-ratio: 978 / 128;
+        width: 100%;
+        height: auto;
+        background-size: 100% 100%;
+    }
+
+    .discount-code h4 {
+        font-size: 2rem;
+    }
+
+    .discount-code p {
+        font-size: .7rem;
+    }
+
+    .other-codes-wrapper h3 {
+        font-size: 1.1rem;
+    }
+
+
+    /* help */
+    .help {
+        padding-top: 21px;
+    }
+
+    .help-div h2 {
+        font-size: 1.3rem;
+    }
+
+    .help-div p {
+        font-size: .9rem;
+        max-width: 82%;
+    }
+
+    .help-form > div > p {
+        font-size: .9rem;
+    }
+
+    .help-form > div > input, .help-form > div > select {
+        padding-left: 10px;
+        font-size: 1.2rem;
+    }
+
+    .help-form button {
+        width: 50%;
+        align-self: center;
+    }
+
+
+    /* settings */
+    .settings {
+        padding-top: 21px;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .settings-div h2 {
+        font-size: 1.3rem;
+    }
+
+    .settings-div p {
+        font-size: .9rem;
+    }
+
+    .settings-div-2 {
+        width: 100%;
+    }
+
+    .settings-div-3 {
+        gap: .7vh;
+    }
+
+    .settings-div-3 h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-left: 12px;
+    }
+
+    .settings-div-3 div {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: .5vh
+    }
+
+    .settings-div-3 div p {
+        width: 85%;
+        font-size: .85rem;
+        background-image: url("/mobile/settings/pasekustawienia.png");
+        aspect-ratio: 975 / 124;
+        padding-left: 10px;
+    }
+
+    .settings-div-3 div button {
+        width: 24%;
+        background-image: url("/mobile/settings/pasekustawieniazmien.png");
+        aspect-ratio: 230 / 69;
+        font-size: 1rem;
+    }
+
+
+    /* auth modal */
+    .auth-modal {
+        width: 100%;
+        height: 100dvh;
+    }
+
+    .auth-modal-inside {
+        width: 95%;
+        height: 95%;
+    }
+
+
+    /* register modal */
+    .register-modal {
+        gap: 2vh;
+    }
+
+    .register-top h1 {
+        font-size: 2rem;
+    }
+
+    .register-top p {
+        font-size: 1.1rem;
+    }
+
+    .register-form {
+        width: 100%;
+        gap: 1vh;
+    }
+
+    .register-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .register-grid div {
+        width: 90%;
+    }
+
+    .register-grid div input {
+        width: 100%;
+        padding-left: 11px;
+    }
+
+    .kreska-pod-okiem {
+        width: 30px;
+    }
+
+    .jebac-design-register-2 p {
+        font-size: .91rem;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* login modal */
+    .login-right {
+        gap: 6vh;
+        width: 100%;
+    }
+
+    .login-modal > img {
+        display: none;
+    }
+
+    .kys-login h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .kys-login p {
+        font-size: 1.1rem;
+    }
+
+    .kreska-donosowa {
+        width: 25px;
+    }
+
+    .jebac-design {
+        justify-content: space-between;
+    }
+
+    .jebac-design-2 {
+        justify-content: space-between;
+    }
+
+    .jebac-design-2 p {
+        font-size: .85rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .login-form {
+        gap: 1vh;
     }
 }

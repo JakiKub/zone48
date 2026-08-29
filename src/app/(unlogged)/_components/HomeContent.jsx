@@ -5,7 +5,11 @@ import { useState } from "react";
 import { translation } from "@/constants/translations";
 import { useSearchParams } from "next/navigation";
 
+import { useModal } from "@/app/context/ModalContext";
+
 const HomeContent = () => {
+    const { openLogin, openRegister } = useModal();
+
     const searchParams = useSearchParams();
     const isPolish = searchParams.get("lang") !== "en";
 
@@ -107,8 +111,8 @@ const HomeContent = () => {
                     <p>{t.home.t3_03}</p>
                 </div>
                 <div className="home-3-wrapper-2">
-                    <button>{t.home.b3_01}</button>
-                    <button>{t.home.b3_02}</button>
+                    <button onClick={() => openLogin()}>{t.home.b3_01}</button>
+                    <button onClick={() => openRegister()}>{t.home.b3_02}</button>
                 </div>
             </section>
             <section className="home-4">
@@ -144,7 +148,7 @@ const HomeContent = () => {
                     <p>{t.home.t5_01}</p>
                     <p>{t.home.t5_02}</p>
                 </div>
-                <button>{t.home.b5}</button>
+                <Link href={isPolish ? "/o-nas" : "/o-nas?lang=en"} className="o-nas-link">{t.home.b5}</Link>
             </section>
         </main>
     )

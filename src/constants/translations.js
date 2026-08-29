@@ -245,6 +245,16 @@ export const translation = {
             t1: "hasło",
             t2: "potwierdź hasło",
             b1: "Zmień hasło"
+        },
+        welcome_navbar: {
+            n1: "Miło Cię widzieć, ",
+        },
+        tabbar: {
+            b1: "Pulpit",
+            b2: "Zniżki",
+            b3: "Odkrywaj",
+            b4: "Ustawienia",
+            b5: "Pomoc"
         }
     },
     false: {
@@ -422,7 +432,7 @@ export const translation = {
         dashboard: {
             n1: "Dashboard",
             n2: "Welcome to Zone 48!",
-            t1: "new possibilities await you. Start exploring and collect benefits.",
+            t1: "New possibilities await you. Start exploring and collect benefits.",
             n3: "Your balance",
             n4: "Latest balance",
             t2: "Last transaction",
@@ -483,6 +493,16 @@ export const translation = {
             t1: "password",
             t2: "confirm password",
             b1: "Change password"
+        },
+        welcome_navbar: {
+            n1: "Nice to see you, ",
+        },
+        tabbar: {
+            b1: "Dashboard",
+            b2: "Discounts",
+            b3: "Discover",
+            b4: "Settings",
+            b5: "Help"
         }
     }
 }

@@ -4,15 +4,19 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+import { useModal } from "@/app/context/ModalContext";
+
 const Menu = ({ isMenuOpen, t, closeMenu }) => {
+    const { openLogin, openRegister } = useModal();
+
     const [isSub1Open, setIsSub1Open] = useState(false);
     const [isSub2Open, setIsSub2Open] = useState(false);
 
     return (
         <motion.div className={`menu-mobile ${isMenuOpen ? "open" : ""}`} initial={{ y: '-100%', opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: '-100%', opacity: 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }}>
             <div className="menu-login-div">
-                <button>{t.menu.b1}</button>
-                <button>{t.menu.b2}</button>
+                <button onClick={() => openLogin()}>{t.menu.b1}</button>
+                <button onClick={() => openRegister()}>{t.menu.b2}</button>
             </div>
             <Link href="/" className="menu-link" onClick={() => closeMenu()}>{t.menu.b3}</Link>
             <div className="menu-item-dropdown">

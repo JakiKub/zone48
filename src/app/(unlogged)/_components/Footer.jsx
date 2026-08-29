@@ -29,7 +29,6 @@ const Footer = () => {
                     <nav>
                         <p>{t.footer.n2}</p>
                         <Link href="/" className="footer-link">{t.footer.l5}</Link>
-                        <Link href="/" className="footer-link">{t.footer.l6}</Link>
                         <Link href="/" className="footer-link">FAQ</Link>
                     </nav>
                     <nav>
