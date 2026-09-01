@@ -16,6 +16,7 @@
 body {
     overflow-x: hidden;
     font-family: var(--font-geist), sans-serif;
+    background-color: #201f35;
 }
 
 .logged-in {
@@ -2725,6 +2726,73 @@ select.kontakt-input {
 .tabbar {
     display: none;
 }
+
+
+/* privacy policy */
+.privacy-policy {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #201f35;
+    padding-left: 5vw;
+    gap: 4vh;
+    margin-bottom: 10vh;
+}
+
+.privacy-policy h1 {
+    color: #beff00;
+    font-size: 2.5rem;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 800;
+}
+
+.privacy-policy > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vh;
+}
+
+.privacy-policy > div h2 {
+    color: #beff00;
+    font-family: var(--font-epilogue), sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.pp-p-1 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.21rem;
+}
+
+.privacy-policy > div > div {
+
+}
+
+.privacy-policy > div > div p {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.21rem;
+}
+
+.pp-p-2 {
+    color: #fff;
+    font-family: var(--font-geist), sans-serif;
+    font-weight: 400;
+    font-size: 1.21rem;
+}
+
+.privacy-policy a {
+    text-decoration: 2px underline #beff00;
+    color: #beff00;
+}
+
+
 
 @media only screen and (max-width: 768px) {
     /* misc */

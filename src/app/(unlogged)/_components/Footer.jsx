@@ -45,8 +45,7 @@ const Footer = () => {
             <section className="footer-bottom">
                 <nav>
                     <Link href="/" className="footer-link-2">{t.footer.regulamin}</Link>
-                    <Link href="/" className="footer-link-2">{t.footer.cookies}</Link>
-                    <Link href="/" className="footer-link-2">{t.footer.cookie_settings}</Link>
+                    <Link href="/privacy-policy" className="footer-link-2">{t.footer.cookies}</Link>
                 </nav>
                 <hr/>
                 <p>© 2026, Zone 48. {t.footer.rights}</p>

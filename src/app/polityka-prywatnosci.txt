@@ -1,0 +1,49 @@
+POLITYKA PRYWATNOŚCI I COOKIES SERWISU ZONE 48
+
+I. Informacje ogólne
+
+Niniejsza polityka dotyczy serwisu znajdującego się pod adresem https://zone48.vercel.app //czy jakkolwiek bedzie domena wygladala
+Administratorem danych jest projekt społeczny Zone 48 realizowany w ramach XIII edycji olimpiady "Zwolnieni z Teorii".
+Kontakt z administratorem: contact.zone48@gmail.com lub przez odpowiednie formularze znajdujące się na stronie.
+
+
+II. Jakie dane przetwarzamy i po co?
+
+Abyś mógł w pełni korzystać z naszego serwisu, zbieramy dane które podajesz przy rejestracji oraz zmian ustawień konta:
+
+1. Profil użytkownika: adres e-mail, nazwa użytkownika oraz narodowość
+2. Bezpieczeństwo: zaszyfrowane hasła oraz tokeny
+3. Okres przechowywania: Twoje dane przechowujemy przez okres posiadania przez Ciebie konta na platformie. W przypadku usunięcia konta, dane zostają trwale usunięte z bazy danych
+
+Podstawa prawna: niezbędność do wykonania usługi (art. 6 ust. 1 lit. b RODO)
+
+
+III. Odbiorcy danych i bezpieczeństwo 
+
+Twoje dane są bezpieczne dzięki szyfrowaniu połączenia (SSL). Korzystamy z zaufanych dostawców:
+
+1. [MongoDB Atlas] - przechowujemy tutaj twój profil
+2. [Vercel.com] - host naszej strony
+3. [Umami Analytics] - używany do analizy ruchu na stronie, więcej na ten temat w punkcie 6.
+
+
+IV. Pliki cookies 
+
+Nasz serwis korzysta z plików cookies, aby "pamiętać", że jesteś zalogowany.
+
+1. Cookies niezbędne: są kluczowe do poprawnego działania strony. Pozwalają utrzymać sesję po zalogowaniu, dzięki czemu strona wie kim jesteś po przejściu na inną zakładkę
+
+
+V. Twoje prawa 
+
+Masz prawo do wglądu w swoje dane, ich poprawienia, a także żądania ich usunięcia (co wiąże się z zamknięciem konta). W tym celu napisz do nas na e-mail podany w punkcie I.
+
+
+VI. Statystyka i analiza ruchu na stronie 
+
+W celu analizy ruchu w naszym serwisie korzystamy z [Umami Analytics]
+
+[Umami Analytics] nie zapisuje żadnych plików cookies na Twoim urządzeniu i nie zbiera danych osobowych (jak na przykład adres IP).
+Dane zbierane przez ten system mają charakter zanonimizowanych statystyk zbiorczych, np. liczba odwiedzin danej strony
+
+Podstawa prawna: uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO)

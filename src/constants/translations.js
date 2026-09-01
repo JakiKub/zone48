@@ -255,6 +255,33 @@ export const translation = {
             b3: "Odkrywaj",
             b4: "Ustawienia",
             b5: "Pomoc"
+        },
+        privacy_policy: {
+            n1: "POLITYKA PRYWATNOŚCI I COOKIES SERWISU ZONE 48",
+            n2: "I. Informacje ogólne",
+            p2_1: "Niniejsza polityka dotyczy serwisu znajdującego się pod adresem https://zone48.vercel.app",
+            p2_2: "Administratorem danych jest projekt społeczny Zone 48 realizowany w ramach XIII edycji olimpiady \"Zwolnieni z Teorii\".",
+            p2_3: "Kontakt z administratorem: contact.zone48@gmail.com lub przez odpowiednie formularze znajdujące się na stronie.",
+            n3: "II. Jakie dane przetwarzamy i po co?",
+            p3_0: "Abyś mógł w pełni korzystać z naszego serwisu, zbieramy dane które podajesz przy rejestracji oraz zmian ustawień konta:",
+            p3_1: "1. Profil użytkownika: adres e-mail, nazwa użytkownika oraz narodowość",
+            p3_2: "2. Bezpieczeństwo: zaszyfrowane hasła oraz tokeny",
+            p3_3: "3. Okres przechowywania: Twoje dane przechowujemy przez okres posiadania przez Ciebie konta na platformie. W przypadku usunięcia konta, dane zostają trwale usunięte z bazy danych",
+            p3_4: "Podstawa prawna: niezbędność do wykonania usługi (art. 6 ust. 1 lit. b RODO)",
+            n4: "III. Odbiorcy danych i bezpieczeństwo ",
+            p4_0: "Twoje dane są bezpieczne dzięki szyfrowaniu połączenia (SSL). Korzystamy z zaufanych dostawców:",
+            p4_1: " - przechowujemy tutaj twój profil",
+            p4_2: " - host naszej strony",
+            p4_3: " - używany do analizy ruchu na stronie, więcej na ten temat w punkcie 6.",
+            n5: "IV. Pliki cookies ",
+            p5_0: "Nasz serwis korzysta z plików cookies, aby \"pamiętać\", że jesteś zalogowany.",
+            p5_1: "1. Cookies niezbędne: są kluczowe do poprawnego działania strony. Pozwalają utrzymać sesję po zalogowaniu, dzięki czemu strona wie kim jesteś po przejściu na inną zakładkę",
+            n6: "V. Twoje prawa ",
+            p6_0: "Masz prawo do wglądu w swoje dane, ich poprawienia, a także żądania ich usunięcia (co wiąże się z zamknięciem konta). W tym celu napisz do nas na e-mail podany w punkcie I.",
+            n7: "VI. Statystyka i analiza ruchu na stronie ",
+            p7_0: "W celu analizy ruchu w naszym serwisie korzystamy z",
+            p7_1: " nie zapisuje żadnych plików cookies na Twoim urządzeniu i nie zbiera danych osobowych (jak na przykład adres IP). Dane zbierane przez ten system mają charakter zanonimizowanych statystyk zbiorczych, np. liczba odwiedzin danej strony",
+            p7_4: "Podstawa prawna: uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO)"
         }
     },
     false: {
@@ -503,6 +530,33 @@ export const translation = {
             b3: "Discover",
             b4: "Settings",
             b5: "Help"
+        },
+        privacy_policy: {
+            n1: "",
+            n2: "",
+            p2_1: "",
+            p2_2: "",
+            p2_3: "",
+            n3: "",
+            p3_0: "",
+            p3_1: "",
+            p3_2: "",
+            p3_3: "",
+            p3_4: "",
+            n4: "",
+            p4_0: "",
+            p4_1: "",
+            p4_2: "",
+            p4_3: "",
+            n5: "",
+            p5_0: "",
+            p5_1: "",
+            n6: "",
+            p6_0: "",
+            n7: "",
+            p7_0: "",
+            p7_1: "",
+            p7_4: ""
         }
     }
 }
