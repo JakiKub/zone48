@@ -1,6 +1,8 @@
 import { Epilogue } from 'next/font/google';
 import { Geist } from 'next/font/google';
 
+import Script from 'next/script';
+
 import "./globals.css";
 
 import ToasterProvider from "./providers/ToasterProvider";
@@ -30,6 +32,7 @@ export default function RootLayout({ children }) {
             <AuthProvider>
                 <ToasterProvider/>
                 {children}
+                <Script async src="https://cloud.umami.is/script.js" data-website-id="61457e26-5697-49c7-9924-d18be780744a"></Script>
             </AuthProvider>
         </body>
         </html>
