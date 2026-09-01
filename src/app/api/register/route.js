@@ -30,7 +30,7 @@ export async function POST(request) {
         const verifyUrl = `${domain}/api/email-verification?token=${rawToken}`;
 
         await resend.emails.send({
-            from: "onboarding@resend.dev", //potem zmienic na no-reply@zone48.com (lub .vercel.app)
+            from: "noreply@zone48.pl",
             to: email,
             subject: "E-mail validation / Potwierdzenie e-maila",
             html: `<p>Kliknij, aby zweryfikować swój e-mail: </p><a href=${verifyUrl}>${verifyUrl}</a>`

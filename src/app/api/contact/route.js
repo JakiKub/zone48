@@ -10,7 +10,7 @@ export async function POST(request) {
         if (!imie || !email || !temat || !wiadomosc) return NextResponse.json({ error: "Wszystkie pola wymagane / All inputs required" }, { status: 400 })
 
         const data = await resend.emails.send({
-            from: "Kontakt <onboarding@resend.dev>",
+            from: "Kontakt <noreply@zone48.pl>",
             to: ['contact.zone48@gmail.com'],
             subject: `Nowa wiadomość na temat ${temat}`,
             html: `

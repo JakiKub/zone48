@@ -39,7 +39,7 @@ export async function POST(request) {
         const verifyUrl = `${domain}/reset-password/${rawToken}`;
 
         await resend.emails.send({
-            from: "onboarding@resend.dev",
+            from: "noreply@zone48.pl",
             to: email,
             subject: "Link do resetu hasła / Reset password link",
             html: `<p>Kliknij poniższy link aby zresetować swoje hasło: / Click this link to reset your password: </p>
